@@ -33,10 +33,10 @@ const AboutPage: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Parallax pages={3} ref={ref} className="bg-white dark:bg-black">
-                <ParallaxLayer offset={0}>
+                <ParallaxLayer offset={0} className="h-auto">
                     <Header location="about" />
                 </ParallaxLayer>
-                <ParallaxLayer offset={0.2} speed={0.2}>
+                <ParallaxLayer offset={0.2} speed={0.2} className="h-auto">
                     <motion.div
                         className="ml-[5vw] px-2 prose-h2:m-0 prose-h3:m-0"
                         variants={Variants}
@@ -64,11 +64,11 @@ const AboutPage: NextPage = () => {
                     </motion.div>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1} speed={1}>
+                <ParallaxLayer offset={1} speed={1} className="h-auto">
                     <Story />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1.55} speed={1.3}>
+                <ParallaxLayer offset={1.55} speed={1.3} className="h-auto">
                     <Doodler />
                 </ParallaxLayer>
             </Parallax>

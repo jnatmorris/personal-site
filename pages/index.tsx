@@ -41,7 +41,7 @@ const Home: NextPage = () => {
                     <Header location={"index"} />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={0.2} speed={1.3}>
+                <ParallaxLayer offset={0.2} speed={1.3} className="h-auto">
                     <motion.div
                         variants={Variants}
                         animate={"show"}
@@ -76,10 +76,10 @@ const Home: NextPage = () => {
                 <ParallaxLayer
                     offset={1}
                     speed={0.7}
-                    className="space-y-5"
+                    className="h-auto space-y-5"
                 ></ParallaxLayer>
 
-                <ParallaxLayer offset={1.88}>
+                <ParallaxLayer offset={1.88} className="h-auto">
                     <div className="mx-[4vw]">
                         <h2 className="m-0">Want to Connect?</h2>
 
