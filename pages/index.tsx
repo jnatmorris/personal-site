@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "../Components/header";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { motion, Variant, Variants } from "framer-motion";
+import MyApproach from "../Components/Index/MyApproach";
 
 const Home: NextPage = () => {
     const Variants: Variants = {
@@ -62,22 +63,18 @@ const Home: NextPage = () => {
                             I&apos;m Justin Morris. A...
                         </motion.h2>
                         <motion.h3 variants={item}>
-                            - Computer Science student
+                            - Computer science student
                         </motion.h3>
 
                         <motion.h3 variants={item}>- Web developer</motion.h3>
 
-                        <motion.h3 variants={item}>
-                            - And Training Pilot
-                        </motion.h3>
+                        <motion.h3 variants={item}>- And pet person</motion.h3>
                     </motion.div>
                 </ParallaxLayer>
 
-                <ParallaxLayer
-                    offset={1}
-                    speed={0.7}
-                    className="h-auto space-y-5"
-                ></ParallaxLayer>
+                <ParallaxLayer offset={1} speed={0.7}>
+                    <MyApproach />
+                </ParallaxLayer>
 
                 <ParallaxLayer offset={1.88}>
                     <div className="mx-[4vw]">

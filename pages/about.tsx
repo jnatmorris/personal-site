@@ -1,11 +1,11 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { motion, Variants } from "framer-motion";
 import Header from "../Components/header";
 import Doodler from "../Components/About/Doodles";
 import Story from "../Components/About/Story";
-import { motion, Variants } from "framer-motion";
 import Pilot from "../Components/About/Pilot";
 
 const AboutPage: NextPage = () => {
@@ -24,8 +24,6 @@ const AboutPage: NextPage = () => {
         show: { opacity: 1 },
     };
 
-    const ref = React.useRef<IParallax>(null!);
-
     return (
         <>
             <Head>
@@ -33,7 +31,7 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Parallax pages={4} ref={ref} className="bg-white dark:bg-black">
+            <Parallax pages={4} className="bg-white dark:bg-black">
                 <ParallaxLayer offset={0}>
                     <Header location="about" />
                 </ParallaxLayer>
@@ -53,11 +51,6 @@ const AboutPage: NextPage = () => {
                         <motion.h3 variants={item}>and</motion.h3>
                         <motion.h2
                             variants={item}
-                            onAnimationComplete={() =>
-                                setTimeout(function () {
-                                    ref.current.scrollTo(0.98);
-                                }, 1000)
-                            }
                             className="underline decoration-blue-400 underline-offset-2"
                         >
                             Self taught web developer
@@ -69,11 +62,13 @@ const AboutPage: NextPage = () => {
                     <Story />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={2} speed={1}>
+                <ParallaxLayer offset={2} speed={2}></ParallaxLayer>
+
+                <ParallaxLayer offset={3} speed={1}>
                     <Doodler />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={3} speed={0.5}>
+                <ParallaxLayer offset={4} speed={0.5}>
                     <Pilot />
                 </ParallaxLayer>
             </Parallax>
