@@ -2,9 +2,9 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import Header from "../Components/header";
-import Doodler from "../Components/About/Doodles";
-import Story from "../Components/About/Story";
+import Header from "../components/header";
+import Doodler from "../components/About/Doodles";
+import Story from "../components/About/Story";
 import { motion, Variants } from "framer-motion";
 
 const AboutPage: NextPage = () => {

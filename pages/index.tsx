@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../Components/header";
+import Header from "../components/header";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { motion, Variant, Variants } from "framer-motion";
 
