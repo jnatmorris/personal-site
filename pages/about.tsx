@@ -32,7 +32,7 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Parallax pages={3} ref={ref} className="bg-white dark:bg-black">
+            <Parallax pages={4} ref={ref} className="bg-white dark:bg-black">
                 <ParallaxLayer offset={0}>
                     <Header location="about" />
                 </ParallaxLayer>
@@ -64,21 +64,11 @@ const AboutPage: NextPage = () => {
                     </motion.div>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1} speed={1} className="h-auto">
+                <ParallaxLayer offset={1} speed={1}>
                     <Story />
                 </ParallaxLayer>
 
-                <ParallaxLayer
-                    offset={
-                        typeof window === "undefined"
-                            ? 2
-                            : window.innerWidth < 768
-                            ? 1.5
-                            : 2
-                    }
-                    speed={1.3}
-                    className="h-auto"
-                >
+                <ParallaxLayer offset={2} speed={1.3}>
                     <Doodler />
                 </ParallaxLayer>
             </Parallax>
