@@ -69,7 +69,7 @@ const AboutPage: NextPage = () => {
                 </ParallaxLayer>
 
                 <ParallaxLayer
-                    offset={window.innerWidth < 640 ? 2.1 : 1.2}
+                    offset={window.innerWidth < 640 ? 1.5 : 2}
                     speed={1.3}
                     className="h-auto"
                 >
