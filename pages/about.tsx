@@ -64,11 +64,11 @@ const AboutPage: NextPage = () => {
                     </motion.div>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1} speed={1}>
+                <ParallaxLayer offset={1} speed={1.2}>
                     <Story />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1.7} speed={1.3}>
+                <ParallaxLayer offset={1.9} speed={1}>
                     <Doodler />
                 </ParallaxLayer>
             </Parallax>
