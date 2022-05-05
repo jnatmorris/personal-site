@@ -68,7 +68,7 @@ const AboutPage: NextPage = () => {
                     <Story />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={2} speed={1.3}>
+                <ParallaxLayer offset={1.7} speed={1.3}>
                     <Doodler />
                 </ParallaxLayer>
             </Parallax>
