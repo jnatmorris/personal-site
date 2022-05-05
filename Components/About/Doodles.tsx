@@ -108,7 +108,7 @@ const Doodler: React.FC = () => {
             </div>
 
             <div className="w-full overflow-hidden bg-white rounded-t-2xl">
-                <div className="relative">
+                <div className="">
                     {loading ? (
                         <div>Loading...</div>
                     ) : (
@@ -248,7 +248,7 @@ const Doodler: React.FC = () => {
                         <motion.svg
                             whileTap={{ scale: 0.9 }}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6 "
+                            className="w-6 h-6"
                             onClick={() => imageHandler(1)}
                             fill="none"
                             viewBox="0 0 24 24"
@@ -265,8 +265,9 @@ const Doodler: React.FC = () => {
                 </div>
 
                 <p className="pb-2 m-0 leading-normal">
-                    In my free time if not exercising or working on a personal
-                    project, I&apos;m doddling away.
+                    This is just a little hobby I partake in during my free
+                    time. Feel free to click on the images or use the arrows to
+                    cycle through some of my art.
                 </p>
             </div>
         </div>
