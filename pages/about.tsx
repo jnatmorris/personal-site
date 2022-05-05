@@ -6,6 +6,7 @@ import Header from "../Components/header";
 import Doodler from "../Components/About/Doodles";
 import Story from "../Components/About/Story";
 import { motion, Variants } from "framer-motion";
+import Pilot from "../Components/About/Pilot";
 
 const AboutPage: NextPage = () => {
     const Variants: Variants = {
@@ -70,6 +71,10 @@ const AboutPage: NextPage = () => {
 
                 <ParallaxLayer offset={2} speed={1}>
                     <Doodler />
+                </ParallaxLayer>
+
+                <ParallaxLayer offset={3} speed={0.5}>
+                    <Pilot />
                 </ParallaxLayer>
             </Parallax>
         </>

@@ -79,10 +79,9 @@ const Home: NextPage = () => {
                     className="h-auto space-y-5"
                 ></ParallaxLayer>
 
-                <ParallaxLayer offset={1.88} className="h-auto">
+                <ParallaxLayer offset={1.88}>
                     <div className="mx-[4vw]">
                         <h2 className="m-0">Want to Connect?</h2>
-
                         <div className="mx-0.5 mt-2 flex justify-between prose-h3:m-0">
                             <motion.h3>
                                 <a
