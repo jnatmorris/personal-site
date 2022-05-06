@@ -4,7 +4,7 @@ import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <LazyMotion strict features={domAnimation}>
+        <LazyMotion features={domAnimation}>
             <MotionConfig reducedMotion="user">
                 <main className="prose dark:prose-invert">
                     <Component {...pageProps} />

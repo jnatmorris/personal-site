@@ -2,8 +2,13 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../Components/header";
-import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { m, Variant, Variants } from "framer-motion";
+import {
+    m,
+    Variants,
+    useViewportScroll,
+    useTransform,
+    MotionValue,
+} from "framer-motion";
 import MyApproach from "../Components/Index/MyApproach";
 
 const Home: NextPage = () => {
@@ -17,16 +22,23 @@ const Home: NextPage = () => {
         },
     };
 
-    const item = {
+    const item: Variants = {
         hidden: { opacity: 0 },
         show: { opacity: 1 },
     };
 
-    const Variant: Variant = {
-        scale: 0.97,
-    };
+    const { scrollY } = useViewportScroll();
 
-    const ref = React.useRef<IParallax>(null!);
+    const yMainText = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [0, 200]
+    );
+    const yApproach = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [800, 1200]
+    );
 
     return (
         <>
@@ -36,13 +48,10 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Parallax pages={2} ref={ref} className="bg-white dark:bg-black">
-                {/* header to navigate to other page */}
-                <ParallaxLayer offset={0}>
-                    <Header location={"index"} />
-                </ParallaxLayer>
+            <div className="h-[300vh]">
+                <Header location="index" scrollY={scrollY} />
 
-                <ParallaxLayer offset={0.2} speed={1.3} className="h-auto">
+                <m.div style={{ y: yMainText }} className="mt-[15vh]">
                     <m.div
                         variants={Variants}
                         animate={"show"}
@@ -65,56 +74,52 @@ const Home: NextPage = () => {
 
                         <m.h3 variants={item}>- And pet person</m.h3>
                     </m.div>
-                </ParallaxLayer>
+                </m.div>
 
-                <ParallaxLayer offset={1} speed={0.7}>
+                <m.div style={{ y: yApproach }}>
                     <MyApproach />
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={1.88}>
-                    <div className="mx-[4vw]">
-                        <h2 className="m-0">Want to Connect?</h2>
-                        <div className="mx-0.5 mt-2 flex justify-between prose-h3:m-0">
-                            <m.h3>
-                                <a
-                                    className="no-underline"
-                                    href="https://github.com/JNat07"
-                                >
-                                    GitHub
-                                </a>
-                            </m.h3>
-                            <m.h3>
-                                <a
-                                    className="no-underline"
-                                    href="https://www.linkedin.com/in/justinnmorris/"
-                                >
-                                    LinkedIn
-                                </a>
-                            </m.h3>
-                            <m.h3 whileTap={{ scale: 0.9 }}>
-                                <a
-                                    className="no-underline"
-                                    href="mailto: evanston07@gmail.com"
-                                >
-                                    Email
-                                </a>
-                            </m.h3>
-                            <m.h3
-                                whileTap={{ scale: 0.9 }}
-                                className="relative"
+                </m.div>
+            </div>
+            <div>
+                <div className="mx-[4vw]">
+                    <h2 className="m-0">Want to Connect?</h2>
+                    <div className="mx-0.5 mt-2 flex justify-between prose-h3:m-0">
+                        <m.h3>
+                            <a
+                                className="no-underline"
+                                href="https://github.com/JNat07"
                             >
-                                <a
-                                    className="no-underline"
-                                    href="CV.pdf"
-                                    download={"JustinMorrisResume"}
-                                >
-                                    Resume
-                                </a>
-                            </m.h3>
-                        </div>
+                                GitHub
+                            </a>
+                        </m.h3>
+                        <m.h3>
+                            <a
+                                className="no-underline"
+                                href="https://www.linkedin.com/in/justinnmorris/"
+                            >
+                                LinkedIn
+                            </a>
+                        </m.h3>
+                        <m.h3 whileTap={{ scale: 0.9 }}>
+                            <a
+                                className="no-underline"
+                                href="mailto: evanston07@gmail.com"
+                            >
+                                Email
+                            </a>
+                        </m.h3>
+                        <m.h3 whileTap={{ scale: 0.9 }} className="relative">
+                            <a
+                                className="no-underline"
+                                href="CV.pdf"
+                                download={"JustinMorrisResume"}
+                            >
+                                Resume
+                            </a>
+                        </m.h3>
                     </div>
-                </ParallaxLayer>
-            </Parallax>
+                </div>
+            </div>
         </>
     );
 };

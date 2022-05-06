@@ -1,8 +1,13 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { m, Variants } from "framer-motion";
+import {
+    m,
+    Variants,
+    useViewportScroll,
+    useTransform,
+    MotionValue,
+} from "framer-motion";
 import Header from "../Components/header";
 import Doodler from "../Components/About/Doodles";
 import Story from "../Components/About/Story";
@@ -19,10 +24,35 @@ const AboutPage: NextPage = () => {
         },
     };
 
-    const item = {
+    const item: Variants = {
         hidden: { opacity: 0 },
         show: { opacity: 1 },
     };
+
+    const { scrollY } = useViewportScroll();
+
+    const headerText = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [0, 200]
+    );
+    const yAboutMe = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [800, 1200]
+    );
+
+    const yDoodles = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [1200, 1500]
+    );
+
+    const yPilot = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [1600, 1800]
+    );
 
     return (
         <>
@@ -31,11 +61,10 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Parallax pages={4} className="bg-white dark:bg-black">
-                <ParallaxLayer offset={0}>
-                    <Header location="about" />
-                </ParallaxLayer>
-                <ParallaxLayer offset={0.2} speed={0.2}>
+            <m.div className="h-[300vh] bg-white dark:bg-black">
+                <Header location="about" scrollY={scrollY} />
+
+                <m.div style={{ y: headerText }} className="mt-[15vh]">
                     <m.div
                         className="ml-[5vw] px-2 prose-h2:m-0 prose-h3:m-0"
                         variants={Variants}
@@ -56,22 +85,20 @@ const AboutPage: NextPage = () => {
                             Self taught web developer
                         </m.h2>
                     </m.div>
-                </ParallaxLayer>
+                </m.div>
 
-                <ParallaxLayer offset={1} speed={1.2}>
+                <m.div style={{ y: yAboutMe }}>
                     <Story />
-                </ParallaxLayer>
+                </m.div>
 
-                <ParallaxLayer offset={2} speed={2}></ParallaxLayer>
-
-                <ParallaxLayer offset={3} speed={1}>
+                <m.div style={{ y: yDoodles }}>
                     <Doodler />
-                </ParallaxLayer>
+                </m.div>
 
-                <ParallaxLayer offset={4} speed={0.5}>
+                <m.div style={{ y: yPilot }}>
                     <Pilot />
-                </ParallaxLayer>
-            </Parallax>
+                </m.div>
+            </m.div>
         </>
     );
 };
