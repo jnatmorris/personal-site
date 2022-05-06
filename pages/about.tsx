@@ -8,7 +8,6 @@ import {
     useTransform,
     MotionValue,
 } from "framer-motion";
-import Header from "../Components/header";
 import Doodler from "../Components/About/Doodles";
 import Story from "../Components/About/Story";
 import Pilot from "../Components/About/Pilot";
@@ -67,10 +66,6 @@ const AboutPage: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <m.div className="h-[300vh] bg-white dark:bg-black">
-                <m.div style={{ y: yHeader }}>
-                    <Header location="about" />
-                </m.div>
-
                 <m.div style={{ y: headerText }} className="mt-[15vh]">
                     <m.div
                         className="ml-[5vw] px-2 prose-h2:m-0 prose-h3:m-0"

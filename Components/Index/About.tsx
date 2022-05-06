@@ -1,18 +1,15 @@
 import * as React from "react";
 
-const MyApproach: React.FC = () => {
-    const [ImageLoaded, setImageLoaded] = React.useState(false);
-
+const About = () => {
     return (
         <div className="pb-1 mx-3 shadow-md rounded-2xl bg-slate-100 ring-1 ring-slate-200 prose-p:m-0 prose-li:m-0 dark:bg-slate-700/60 dark:ring-slate-800">
             {/* pre-load images and to not have to load later */}
 
             <div className="px-2 pt-3">
-                <h3 className="m-0 justify-self-start">My rules of thumb</h3>
+                <h3 className="m-0 justify-self-start">Who I am</h3>
 
                 <p className="pb-2 m-0 leading-normal">
-                    I design websites with the mentality that within the first
-                    fifteen seconds the user will decide to stay or leave.
+                    I'm a University Student
                 </p>
                 <h4 className="mt-2 mb-0 font-normal underline underline-offset-[0.5px]">
                     Keys to a website
@@ -37,4 +34,4 @@ const MyApproach: React.FC = () => {
     );
 };
 
-export default MyApproach;
+export default About;
