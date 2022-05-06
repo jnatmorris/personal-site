@@ -1,6 +1,5 @@
 import * as React from "react";
-import { AnimatePresence } from "framer-motion";
-import { motion, Variants } from "framer-motion";
+import { m, Variants, AnimatePresence } from "framer-motion";
 
 const Doodler: React.FC = () => {
     const [activeImage, setActiveImg] = React.useState<number>(1);
@@ -115,7 +114,7 @@ const Doodler: React.FC = () => {
                         <>
                             <AnimatePresence>
                                 {activeImage === 1 && (
-                                    <motion.div
+                                    <m.div
                                         variants={imgVariants}
                                         animate={"show"}
                                         initial={
@@ -132,13 +131,13 @@ const Doodler: React.FC = () => {
                                             alt="bf109"
                                             className="m-0 rounded-t-xl"
                                         />
-                                    </motion.div>
+                                    </m.div>
                                 )}
                             </AnimatePresence>
 
                             <AnimatePresence>
                                 {activeImage === 2 && finishedDismount && (
-                                    <motion.div
+                                    <m.div
                                         variants={imgVariants}
                                         animate={"show"}
                                         initial={"initial"}
@@ -153,13 +152,13 @@ const Doodler: React.FC = () => {
                                             alt="train"
                                             className="m-0 rounded-t-xl"
                                         />
-                                    </motion.div>
+                                    </m.div>
                                 )}
                             </AnimatePresence>
 
                             <AnimatePresence>
                                 {activeImage === 3 && finishedDismount && (
-                                    <motion.div
+                                    <m.div
                                         variants={imgVariants}
                                         animate={"show"}
                                         initial={"initial"}
@@ -174,13 +173,13 @@ const Doodler: React.FC = () => {
                                             alt="train"
                                             className="m-0 rounded-t-xl"
                                         />
-                                    </motion.div>
+                                    </m.div>
                                 )}
                             </AnimatePresence>
 
                             <AnimatePresence>
                                 {activeImage === 4 && finishedDismount && (
-                                    <motion.div
+                                    <m.div
                                         variants={imgVariants}
                                         animate={"show"}
                                         initial={"initial"}
@@ -195,13 +194,13 @@ const Doodler: React.FC = () => {
                                             alt="train"
                                             className="m-0 rounded-t-xl"
                                         />
-                                    </motion.div>
+                                    </m.div>
                                 )}
                             </AnimatePresence>
 
                             <AnimatePresence>
                                 {activeImage === 5 && finishedDismount && (
-                                    <motion.div
+                                    <m.div
                                         variants={imgVariants}
                                         animate={"show"}
                                         initial={"initial"}
@@ -216,7 +215,7 @@ const Doodler: React.FC = () => {
                                             alt="train"
                                             className="m-0 rounded-t-xl"
                                         />
-                                    </motion.div>
+                                    </m.div>
                                 )}
                             </AnimatePresence>
                         </>
@@ -229,7 +228,7 @@ const Doodler: React.FC = () => {
                     <h3 className="m-0 justify-self-start">Doodler</h3>
 
                     <div className="flex space-x-2 justify-self-end">
-                        <motion.svg
+                        <m.svg
                             whileTap={{ scale: 0.9 }}
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-6 h-6"
@@ -244,8 +243,8 @@ const Doodler: React.FC = () => {
                                 strokeLinejoin="round"
                                 d="M15 19l-7-7 7-7"
                             />
-                        </motion.svg>
-                        <motion.svg
+                        </m.svg>
+                        <m.svg
                             whileTap={{ scale: 0.9 }}
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-6 h-6"
@@ -260,7 +259,7 @@ const Doodler: React.FC = () => {
                                 strokeLinejoin="round"
                                 d="M9 5l7 7-7 7"
                             />
-                        </motion.svg>
+                        </m.svg>
                     </div>
                 </div>
 

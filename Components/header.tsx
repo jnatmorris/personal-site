@@ -1,8 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import { Variant } from "framer-motion";
+import { m, Variant } from "framer-motion";
 
 interface Props {
     location: string;
@@ -17,7 +15,7 @@ const Header: React.FC<Props> = ({ location }) => {
         <div className="pt-2 mx-5 bg-transparent">
             <div className="grid w-full">
                 <div className="space-x-5 justify-self-end">
-                    <motion.button whileTap={whileTapScale}>
+                    <m.button whileTap={whileTapScale}>
                         <Link href={"/"}>
                             <a
                                 className={
@@ -29,9 +27,9 @@ const Header: React.FC<Props> = ({ location }) => {
                                 Home
                             </a>
                         </Link>
-                    </motion.button>
+                    </m.button>
 
-                    <motion.button whileTap={whileTapScale}>
+                    <m.button whileTap={whileTapScale}>
                         <Link href={"/about"}>
                             <a
                                 className={
@@ -43,7 +41,7 @@ const Header: React.FC<Props> = ({ location }) => {
                                 About
                             </a>
                         </Link>
-                    </motion.button>
+                    </m.button>
                 </div>
             </div>
         </div>

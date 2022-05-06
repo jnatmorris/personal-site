@@ -2,7 +2,7 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 import Header from "../Components/header";
 import Doodler from "../Components/About/Doodles";
 import Story from "../Components/About/Story";
@@ -36,26 +36,26 @@ const AboutPage: NextPage = () => {
                     <Header location="about" />
                 </ParallaxLayer>
                 <ParallaxLayer offset={0.2} speed={0.2}>
-                    <motion.div
+                    <m.div
                         className="ml-[5vw] px-2 prose-h2:m-0 prose-h3:m-0"
                         variants={Variants}
                         animate={"show"}
                         initial={"hidden"}
                     >
-                        <motion.h2
+                        <m.h2
                             variants={item}
                             className="underline decoration-blue-400 underline-offset-2"
                         >
                             Uni student
-                        </motion.h2>
-                        <motion.h3 variants={item}>and</motion.h3>
-                        <motion.h2
+                        </m.h2>
+                        <m.h3 variants={item}>and</m.h3>
+                        <m.h2
                             variants={item}
                             className="underline decoration-blue-400 underline-offset-2"
                         >
                             Self taught web developer
-                        </motion.h2>
-                    </motion.div>
+                        </m.h2>
+                    </m.div>
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={1} speed={1.2}>
