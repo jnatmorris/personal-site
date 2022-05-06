@@ -37,7 +37,7 @@ const Home: NextPage = () => {
     const yApproach = useTransform<MotionValue<number>, unknown>(
         scrollY,
         [0, 300],
-        [800, 1200]
+        [900, 1200]
     );
 
     const yHeader = useTransform<MotionValue<number>, unknown>(
@@ -55,15 +55,14 @@ const Home: NextPage = () => {
             </Head>
 
             <div className="h-[300vh]">
-                <m.div style={{ y: yHeader }}>
-                    <Header location="index" />
-                </m.div>
-                <m.div style={{ y: yMainText }} className="mt-[15vh]">
+                <Header location="index" />
+
+                <m.div style={{ y: yMainText }} className="pt-[15vh]">
                     <m.div
                         variants={Variants}
                         animate={"show"}
                         initial={"hidden"}
-                        className="ml-[5vw] mt-[0vh] prose-h1:m-0 prose-h2:m-0 prose-h3:m-0"
+                        className="ml-[5vw] prose-h1:m-0 prose-h2:m-0 prose-h3:m-0"
                     >
                         <m.div variants={item} className="flex pb-3 space-x-2">
                             <h1 className="underline decoration-blue-400 underline-offset-2">
@@ -79,7 +78,7 @@ const Home: NextPage = () => {
 
                         <m.h3 variants={item}>- Web developer</m.h3>
 
-                        <m.h3 variants={item}>- And pet person</m.h3>
+                        <m.h3 variants={item}>- And curiosity driven</m.h3>
                     </m.div>
                 </m.div>
 
@@ -87,11 +86,12 @@ const Home: NextPage = () => {
                     <MyApproach />
                 </m.div>
             </div>
-            <div>
+
+            <div className="">
                 <div className="mx-[4vw]">
                     <h2 className="m-0">Want to Connect?</h2>
                     <div className="mx-0.5 mt-2 flex justify-between prose-h3:m-0">
-                        <m.h3>
+                        <m.h3 whileTap={{ scale: 0.9 }}>
                             <a
                                 className="no-underline"
                                 href="https://github.com/JNat07"
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
                                 GitHub
                             </a>
                         </m.h3>
-                        <m.h3>
+                        <m.h3 whileTap={{ scale: 0.9 }}>
                             <a
                                 className="no-underline"
                                 href="https://www.linkedin.com/in/justinnmorris/"
