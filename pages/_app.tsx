@@ -8,9 +8,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <LazyMotion strict features={domAnimation}>
             <MotionConfig reducedMotion="user">
                 <main className="prose bg-white dark:prose-invert dark:bg-black">
-                    <div className="p-1">
-                        <Header />
-                    </div>
                     <Component {...pageProps} />
                 </main>
             </MotionConfig>
