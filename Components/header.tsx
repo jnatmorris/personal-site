@@ -12,7 +12,7 @@ const Header: React.FC<Props> = ({ location }) => {
     };
 
     return (
-        <div className="pt-2 mx-5 bg-transparent">
+        <div className="pt-2 mx-5">
             <div className="grid w-full">
                 <div className="space-x-5 justify-self-end">
                     <m.button whileTap={whileTapScale}>

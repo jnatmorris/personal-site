@@ -40,6 +40,12 @@ const Home: NextPage = () => {
         [800, 1200]
     );
 
+    const yHeader = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 400],
+        [0, 350]
+    );
+
     return (
         <>
             <Head>
@@ -49,8 +55,9 @@ const Home: NextPage = () => {
             </Head>
 
             <div className="h-[300vh]">
-                <Header location="index" scrollY={scrollY} />
-
+                <m.div style={{ y: yHeader }}>
+                    <Header location="index" />
+                </m.div>
                 <m.div style={{ y: yMainText }} className="mt-[15vh]">
                     <m.div
                         variants={Variants}

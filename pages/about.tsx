@@ -53,6 +53,11 @@ const AboutPage: NextPage = () => {
         [0, 300],
         [1600, 1800]
     );
+    const yHeader = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 400],
+        [0, 350]
+    );
 
     return (
         <>
@@ -62,7 +67,9 @@ const AboutPage: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <m.div className="h-[300vh] bg-white dark:bg-black">
-                <Header location="about" scrollY={scrollY} />
+                <m.div style={{ y: yHeader }}>
+                    <Header location="about" />
+                </m.div>
 
                 <m.div style={{ y: headerText }} className="mt-[15vh]">
                     <m.div
