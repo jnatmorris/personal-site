@@ -110,7 +110,7 @@ const Home: NextPage = () => {
                         <m.h3 whileTap={{ scale: 0.9 }}>
                             <a
                                 className="no-underline"
-                                href="mailto: evanston07@gmail.com"
+                                href="mailto:contact@jnmorris.dev"
                             >
                                 Email
                             </a>
