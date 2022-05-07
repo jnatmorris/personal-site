@@ -3,8 +3,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../Components/header";
 import Connect from "../Components/Index/Connect";
-import { m, Variants } from "framer-motion";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Howdy from "../Components/Index/Howdy";
+import {
+    m,
+    Variants,
+    useViewportScroll,
+    useTransform,
+    MotionValue,
+} from "framer-motion";
 
 const Home: NextPage = () => {
     const Variants: Variants = {
@@ -22,6 +28,19 @@ const Home: NextPage = () => {
         show: { opacity: 1 },
     };
 
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 300],
+        [0, 200]
+    );
+
+    const y2 = useTransform<MotionValue<number>, unknown>(
+        scrollY,
+        [0, 500],
+        [0, 200]
+    );
+
     return (
         <>
             <Head>
@@ -30,45 +49,39 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Parallax pages={2} className="bg-black">
-                <ParallaxLayer offset={0} speed={1}>
-                    <Header />
-                </ParallaxLayer>
-                <ParallaxLayer offset={0.2} speed={2}>
-                    <m.div className="">
-                        <m.div
-                            variants={Variants}
-                            animate={"show"}
-                            initial={"hidden"}
-                            className="ml-[5vw] prose-h1:m-0 prose-h2:m-0 prose-h3:m-0"
-                        >
-                            <m.div
-                                variants={item}
-                                className="flex pb-3 space-x-2"
-                            >
-                                <h1 className="underline decoration-blue-400 underline-offset-2">
-                                    Howdy,
-                                </h1>
-                                <h1>&#x1F44B;</h1>
-                            </m.div>
-
-                            <m.h2 variants={item}>
-                                I&apos;m Justin Morris. A...
-                            </m.h2>
-                            <m.h3 variants={item}>
-                                - Computer science student
-                            </m.h3>
-
-                            <m.h3 variants={item}>- Web developer</m.h3>
-
-                            <m.h3 variants={item}>- Curiosity driven</m.h3>
+            <m.div className="relative" style={{ y: y1 }}>
+                <Header />
+                <m.div className="mt-[20vh]">
+                    <m.div
+                        variants={Variants}
+                        animate={"show"}
+                        initial={"hidden"}
+                        className="ml-[5vw] prose-h1:m-0 prose-h2:m-0 prose-h3:m-0"
+                    >
+                        <m.div variants={item} className="flex pb-3 space-x-2">
+                            <h1 className="underline decoration-blue-400 underline-offset-2">
+                                Howdy,
+                            </h1>
+                            <h1>&#x1F44B;</h1>
                         </m.div>
+
+                        <m.h2 variants={item}>
+                            I&apos;m Justin Morris. A...
+                        </m.h2>
+                        <m.h3 variants={item}>- Computer science student</m.h3>
+
+                        <m.h3 variants={item}>- Web developer</m.h3>
+
+                        <m.h3 variants={item}>- Curiosity driven</m.h3>
                     </m.div>
-                </ParallaxLayer>
-                <ParallaxLayer offset={1}>
+                </m.div>
+            </m.div>
+
+            <m.div className="relative h-screen" style={{ y: y2 }}>
+                <div className="absolute inset-x-0 bottom-2">
                     <Connect />
-                </ParallaxLayer>
-            </Parallax>
+                </div>
+            </m.div>
         </>
     );
 };
