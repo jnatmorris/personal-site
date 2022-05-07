@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
     return (
         <div className="pt-2 mx-5">
-            <div className="grid w-full">
+            <div className="grid ">
                 <div className="space-x-5 justify-self-end">
                     <m.button whileTap={whileTapScale}>
                         <Link href={"/"}>
