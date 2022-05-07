@@ -1,8 +1,15 @@
 import * as React from "react";
 import { m } from "framer-motion";
+import { opacityVariants } from "../../pages/_app";
 
 const Connect: React.FC = () => (
-    <div className="mx-[4vw]">
+    <m.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        variants={opacityVariants}
+        className="mx-[4vw]"
+    >
         <h3 className="m-0">Want to Connect?</h3>
         <div className="mx-0.5 mt-1 flex justify-between prose-h3:m-0">
             <m.h3 whileTap={{ scale: 0.9 }}>
@@ -33,7 +40,7 @@ const Connect: React.FC = () => (
                 </a>
             </m.h3>
         </div>
-    </div>
+    </m.div>
 );
 
 export default Connect;

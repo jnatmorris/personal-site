@@ -5,35 +5,55 @@ import Welcome from "../Components/Index/Welcome";
 import About from "../Components/Index/About";
 import MyMentality from "../Components/Index/MyMentality";
 import MyTech from "../Components/Index/MyTech";
+import { m } from "framer-motion";
+import { opacityVariants } from "./_app";
 
-const Home: NextPage = () => (
-    <>
-        <Head>
-            <title>Justin Morris</title>
-            <meta name="description" content="Justin's Personal Site" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
+const Home: NextPage = () => {
+    return (
+        <>
+            <Head>
+                <title>Justin Morris</title>
+                <meta name="description" content="Justin's Personal Site" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-        <main>
-            <div className="h-screen">
-                <Welcome />
-            </div>
+            <main>
+                <div className="h-screen">
+                    <Welcome />
+                </div>
 
-            <div className="space-y-[10vh]">
-                <div className="p-3">
+                <m.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    variants={opacityVariants}
+                    className="h-screen p-3"
+                >
                     <About />
-                </div>
+                </m.div>
 
-                <div className="p-3">
+                <m.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    variants={opacityVariants}
+                    className="h-screen p-3"
+                >
                     <MyTech />
-                </div>
+                </m.div>
 
-                <div className="p-3">
+                <m.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    variants={opacityVariants}
+                    className="p-3 "
+                >
                     <MyMentality />
-                </div>
-            </div>
-        </main>
-    </>
-);
+                </m.div>
+            </main>
+        </>
+    );
+};
 
 export default Home;

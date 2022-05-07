@@ -1,8 +1,28 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
+import {
+    LazyMotion,
+    MotionConfig,
+    domAnimation,
+    Variants,
+} from "framer-motion";
 import Header from "../Components/header";
 import Connect from "../Components/Index/Connect";
+
+export const opacityVariants: Variants = {
+    hidden: {
+        opacity: 0.2,
+        transition: {
+            duration: 0,
+        },
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+        },
+    },
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (

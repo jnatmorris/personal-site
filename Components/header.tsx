@@ -2,6 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import { m, Variant } from "framer-motion";
 import { useRouter } from "next/router";
+import { opacityVariants } from "../pages/_app";
 
 const Header: React.FC = () => {
     const whileTapScale: Variant = {
@@ -11,7 +12,13 @@ const Header: React.FC = () => {
     const route = useRouter();
 
     return (
-        <div className="grid">
+        <m.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={opacityVariants}
+            className="grid"
+        >
             <div className="space-x-5 justify-self-end">
                 <m.button whileTap={whileTapScale}>
                     <Link href={"/"}>
@@ -41,7 +48,7 @@ const Header: React.FC = () => {
                     </Link>
                 </m.button>
             </div>
-        </div>
+        </m.div>
     );
 };
 
