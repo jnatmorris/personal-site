@@ -4,7 +4,7 @@ import Head from "next/head";
 import { m, Variants } from "framer-motion";
 import Doodler from "../Components/About/Doodles";
 import Pilot from "../Components/About/Pilot";
-import Header from "../Components/header";
+import { opacityVariants } from "./_app";
 
 const AboutPage: NextPage = () => {
     const Variants: Variants = {
@@ -52,11 +52,25 @@ const AboutPage: NextPage = () => {
                         </m.h2>
                     </m.div>
                 </div>
-                <div className="space-y-[10vh]">
+                <m.div
+                    className="h-screen"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    variants={opacityVariants}
+                >
                     <Doodler />
+                </m.div>
 
+                <m.div
+                    className="h-screen"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    variants={opacityVariants}
+                >
                     <Pilot />
-                </div>
+                </m.div>
             </main>
         </>
     );

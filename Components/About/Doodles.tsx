@@ -1,5 +1,6 @@
 import * as React from "react";
 import { m, Variants, AnimatePresence } from "framer-motion";
+import { opacityVariants } from "../../pages/_app";
 
 const Doodler: React.FC = () => {
     const [activeImage, setActiveImg] = React.useState<number>(1);
