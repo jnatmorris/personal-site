@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                 <meta name="description" content="Justin's Personal Site" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Parallax pages={2.7}>
+            <Parallax pages={3}>
                 <ParallaxLayer offset={0} speed={1.4}>
                     <Header />
                 </ParallaxLayer>
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                     </div>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={2.6}>
+                <ParallaxLayer offset={2.8}>
                     <div className="p-3">
                         <Connect />
                     </div>
