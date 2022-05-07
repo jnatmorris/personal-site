@@ -1,16 +1,10 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../Components/header";
 import Connect from "../Components/Index/Connect";
-import Howdy from "../Components/Index/Howdy";
-import {
-    m,
-    Variants,
-    useViewportScroll,
-    useTransform,
-    MotionValue,
-} from "framer-motion";
+import Header from "../Components/header";
+import { m, Variants } from "framer-motion";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const Home: NextPage = () => {
     const Variants: Variants = {
@@ -28,19 +22,6 @@ const Home: NextPage = () => {
         show: { opacity: 1 },
     };
 
-    const { scrollY } = useViewportScroll();
-    const y1 = useTransform<MotionValue<number>, unknown>(
-        scrollY,
-        [0, 300],
-        [0, 200]
-    );
-
-    const y2 = useTransform<MotionValue<number>, unknown>(
-        scrollY,
-        [0, 500],
-        [0, 200]
-    );
-
     return (
         <>
             <Head>
@@ -48,10 +29,11 @@ const Home: NextPage = () => {
                 <meta name="description" content="Justin's Personal Site" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <m.div className="relative" style={{ y: y1 }}>
-                <Header />
-                <m.div className="mt-[20vh]">
+            <Parallax pages={2}>
+                <ParallaxLayer offset={0} speed={1.4}>
+                    <Header />
+                </ParallaxLayer>
+                <ParallaxLayer offset={0.2} speed={1.2}>
                     <m.div
                         variants={Variants}
                         animate={"show"}
@@ -74,14 +56,15 @@ const Home: NextPage = () => {
 
                         <m.h3 variants={item}>- Curiosity driven</m.h3>
                     </m.div>
-                </m.div>
-            </m.div>
-
-            <m.div className="relative h-screen" style={{ y: y2 }}>
-                <div className="absolute inset-x-0 bottom-2">
-                    <Connect />
-                </div>
-            </m.div>
+                </ParallaxLayer>
+                <ParallaxLayer offset={1} speed={1}>
+                    <div className="relative h-screen">
+                        <div className="absolute inset-x-0 bottom-2">
+                            <Connect />
+                        </div>
+                    </div>
+                </ParallaxLayer>
+            </Parallax>
         </>
     );
 };
