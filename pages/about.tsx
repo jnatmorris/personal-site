@@ -3,7 +3,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { m, Variants } from "framer-motion";
 import Doodler from "../Components/About/Doodles";
-import Story from "../Components/About/Story";
 import Pilot from "../Components/About/Pilot";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Header from "../Components/header";
@@ -31,11 +30,11 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Parallax pages={3} className="prose dark:prose-invert">
+            <Parallax pages={4} className="prose dark:prose-invert">
                 <ParallaxLayer offset={0} speed={1.4}>
                     <Header />
                 </ParallaxLayer>
-                <ParallaxLayer offset={0.2}>
+                <ParallaxLayer offset={0.2} speed={1}>
                     <m.div
                         className="ml-[5vw] px-2 prose-h2:m-0 prose-h3:m-0"
                         variants={Variants}
@@ -58,15 +57,11 @@ const AboutPage: NextPage = () => {
                     </m.div>
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={1}>
-                    <Story />
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={2}>
+                <ParallaxLayer offset={2} speed={2}>
                     <Doodler />
                 </ParallaxLayer>
 
-                <ParallaxLayer offset={3}>
+                <ParallaxLayer offset={3} speed={1.5}>
                     <Pilot />
                 </ParallaxLayer>
             </Parallax>
