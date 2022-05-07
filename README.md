@@ -1,3 +1,3 @@
 # My personal site
 
-Built using NextJS
+-Built using NextJS
