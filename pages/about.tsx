@@ -46,7 +46,7 @@ const AboutPage: NextPage = () => {
                 />
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
-            <main>
+            <main className="bg-white dark:bg-black">
                 <div className="h-screen">
                     <m.div
                         className="ml-[5vw] px-2 prose-h2:m-0 prose-h3:m-0"

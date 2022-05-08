@@ -36,7 +36,7 @@ const Home: NextPage = () => {
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
 
-            <main>
+            <main className="bg-white dark:bg-black">
                 <div className="h-screen">
                     <Welcome />
                 </div>
