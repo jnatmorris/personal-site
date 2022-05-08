@@ -8,10 +8,10 @@ const Connect: React.FC = () => (
         whileInView="visible"
         viewport={{ once: false }}
         variants={opacityVariants}
-        className="mx-[4vw] lg:text-3xl"
+        className="mx-[2vw] pb-[2vh] lg:mx-[0vw]"
     >
-        <h3 className="m-0">Want to Connect?</h3>
-        <div className="mx-0.5 mt-1 flex justify-between prose-h3:m-0">
+        <h2 className="pb-[1vh] lg:pb-[2vh] lg:text-4xl">Want to Connect?</h2>
+        <div className="mx-[0.5vw] mt-1 flex justify-between prose-h3:m-0 lg:prose-h3:text-3xl">
             <m.h3 whileTap={{ scale: 0.9 }}>
                 <a className="no-underline" href="https://github.com/JNat07">
                     GitHub
