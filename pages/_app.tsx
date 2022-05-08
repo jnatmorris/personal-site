@@ -28,8 +28,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <LazyMotion strict features={domAnimation}>
             <MotionConfig reducedMotion="user">
-                <div className="prose bg-white prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h3:text-slate-700 prose-h4:m-0 prose-p:m-0 dark:prose-invert dark:bg-black lg:prose-h2:text-slate-800">
-                    <div className="w-screen">
+                <div className="w-screen">
+                    <div className="prose bg-white prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h3:text-slate-700 prose-h4:m-0 prose-p:m-0 dark:prose-invert dark:bg-black lg:prose-h2:text-slate-800">
                         <div className="mx-[3vw] lg:mx-[5vw]">
                             {/* header */}
                             <header className="mb-[17vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]">
