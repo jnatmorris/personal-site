@@ -2,14 +2,15 @@ import * as React from "react";
 
 const MyTech: React.FC = () => (
     <>
-        <h2 className="mb-2 underline decoration-sky-600 underline-offset-2">
+        <h2 className="mb-2 underline decoration-sky-600 underline-offset-2 lg:text-4xl">
             Tech you can find in my sites
         </h2>
-        <h3 className="font-normal leading-normal">
+        <h3 className="font-normal leading-normal lg:text-3xl lg:leading-loose">
             While I have my preferences, based off experiences, I'm always
-            flexible to trying something new.
+            flexible to trying something new. Here is what I&apos;m currently
+            using:
         </h3>
-        <ul>
+        <ul className="list-outside lg:mt-[4vh] lg:text-3xl">
             <li>
                 <h4>
                     ReactJS -{" "}

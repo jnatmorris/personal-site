@@ -8,7 +8,7 @@ const Connect: React.FC = () => (
         whileInView="visible"
         viewport={{ once: false }}
         variants={opacityVariants}
-        className="mx-[4vw]"
+        className="mx-[4vw] lg:text-3xl"
     >
         <h3 className="m-0">Want to Connect?</h3>
         <div className="mx-0.5 mt-1 flex justify-between prose-h3:m-0">
