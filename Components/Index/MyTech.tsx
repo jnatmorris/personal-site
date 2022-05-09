@@ -6,7 +6,7 @@ const MyTech: React.FC = () => (
             Tech you can find in my sites
         </h2>
         <h3 className="font-normal leading-normal lg:text-3xl lg:leading-loose">
-            While I have my preferences, based off experiences, I'm always
+            While I have my preferences, based off experiences, I&apos;m always
             flexible to trying something new. Here is what I&apos;m currently
             using:
         </h3>
