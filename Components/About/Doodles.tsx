@@ -1,12 +1,13 @@
 import * as React from "react";
 import { m, Variants, AnimatePresence } from "framer-motion";
+import Loading from "../Loading";
 
 const Doodler: React.FC = () => {
     const [activeImage, setActiveImg] = React.useState<number>(1);
-    const [finishedDismount, setFinishedDismount] = React.useState(false);
-    const [loading, setLoading] = React.useState<boolean>(true);
+    const [finishedDismount, setFinishedDismount] =
+        React.useState<boolean>(false);
+    const [imagesLoaded, setImagesLoaded] = React.useState<boolean>(false);
     const [firstLoad, setFirstLoad] = React.useState<boolean>(true);
-    const counter = React.useRef(0);
 
     const imgVariants: Variants = {
         initial: {
@@ -45,24 +46,31 @@ const Doodler: React.FC = () => {
         "./doodles/gus.png",
     ];
 
-    const imageLoaded = (): void => {
-        counter.current += 1;
+    // preload images
+    // https://stackoverflow.com/a/61104851
+    React.useEffect(() => {
+        images.forEach((image, index) => {
+            const newImage = new Image();
+            newImage.src = image;
+            window[image] = newImage;
 
-        if (counter.current >= images.length) {
-            setLoading(false);
-        }
-    };
+            if (index === images.length - 1) {
+                setImagesLoaded(true);
+            }
+        });
+    }, []);
 
+    // Handle buttons being clicked to change images
     const imageHandler = (value: number): void => {
         const currentImage = activeImage + value;
 
         // currentImage is more than number of images
-        if (currentImage > images.length) {
+        if (currentImage > images.length - 1) {
             // if at end and want to go to next, show 1
             setActiveImg(1);
         } else if (currentImage < 1) {
             // if at start and want to go back, show last image
-            setActiveImg(images.length);
+            setActiveImg(images.length - 1);
         } else {
             // else just cycle
             setActiveImg(currentImage);
@@ -73,44 +81,10 @@ const Doodler: React.FC = () => {
     };
 
     return (
-        <div className="mx-3 shadow-md rounded-2xl bg-slate-100 ring-1 ring-slate-200 dark:bg-slate-700/60 dark:ring-slate-800">
-            {/* prelaod images and to not have to load later */}
-            <div hidden={true}>
-                <img
-                    src="./doodles/bf109.png"
-                    alt="plane"
-                    onLoad={imageLoaded}
-                />
-                <img
-                    src="./doodles/train.png"
-                    alt="train"
-                    onLoad={imageLoaded}
-                />
-
-                <img
-                    src="./doodles/shuttle.png"
-                    alt="shuttle"
-                    onLoad={imageLoaded}
-                />
-
-                <img
-                    src="./doodles/t33.png"
-                    alt="shuttle"
-                    onLoad={imageLoaded}
-                />
-
-                <img
-                    src="./doodles/gus.png"
-                    alt="shuttle"
-                    onLoad={imageLoaded}
-                />
-            </div>
-
-            <div className="w-full overflow-hidden bg-white rounded-t-2xl">
+        <div className="mx-3 rounded-2xl bg-slate-100 shadow-md ring-1 ring-slate-200 dark:bg-slate-700/60 dark:ring-slate-800 lg:mx-[24vw]">
+            <div className="w-full overflow-hidden bg-white rounded-t-2xl ">
                 <div className="">
-                    {loading ? (
-                        <div>Loading...</div>
-                    ) : (
+                    {imagesLoaded ? (
                         <>
                             <AnimatePresence>
                                 {activeImage === 1 && (
@@ -209,29 +183,36 @@ const Doodler: React.FC = () => {
                                         onAnimationComplete={() =>
                                             setFinishedDismount(true)
                                         }
-                                    >
-                                        <img
-                                            src={images[4]}
-                                            alt="train"
-                                            className="m-0 rounded-t-xl"
-                                        />
-                                    </m.div>
+                                    ></m.div>
                                 )}
                             </AnimatePresence>
+                        </>
+                    ) : (
+                        <>
+                            {/* with image rendered already, relieves lag from above image */}
+                            <img
+                                src="./doodles/bf109.png"
+                                hidden={true}
+                                alt="plane"
+                            />
+
+                            <p className="bg-red-300">test</p>
                         </>
                     )}
                 </div>
             </div>
 
-            <div className="px-2 pt-3 ">
+            <div className="px-[1vw] pt-3 lg:px-[1vw]">
                 <div className="grid grid-cols-2">
-                    <h3 className="m-0 justify-self-start">Doodler</h3>
+                    <h3 className="m-0 justify-self-start lg:pb-2 lg:text-3xl">
+                        Doodler
+                    </h3>
 
                     <div className="flex space-x-2 justify-self-end">
                         <m.svg
                             whileTap={{ scale: 0.9 }}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6"
+                            className="w-6 h-6 lg:h-8 lg:w-8"
                             onClick={() => imageHandler(-1)}
                             fill="none"
                             viewBox="0 0 24 24"
@@ -247,7 +228,7 @@ const Doodler: React.FC = () => {
                         <m.svg
                             whileTap={{ scale: 0.9 }}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6"
+                            className="w-6 h-6 lg:h-8 lg:w-8"
                             onClick={() => imageHandler(1)}
                             fill="none"
                             viewBox="0 0 24 24"
@@ -263,7 +244,7 @@ const Doodler: React.FC = () => {
                     </div>
                 </div>
 
-                <p className="pb-2 m-0 leading-normal">
+                <p className="pb-2 m-0 text-xl leading-normal">
                     This is just a little hobby I partake in during my free
                     time. Feel free to click on the images or use the arrows to
                     cycle through some of my art.
