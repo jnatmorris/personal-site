@@ -4,7 +4,7 @@ import Head from "next/head";
 import { m, Variants } from "framer-motion";
 import Doodler from "../Components/About/Doodles";
 import Pilot from "../Components/About/Pilot";
-import { opacityVariants } from "./_app";
+import { opacityVariants } from "../Components/Layout";
 
 const AboutPage: NextPage = () => {
     const Variants: Variants = {
