@@ -6,7 +6,7 @@ import About from "../Components/Index/About";
 import MyMentality from "../Components/Index/MyMentality";
 import MyTech from "../Components/Index/MyTech";
 import { m } from "framer-motion";
-import { opacityVariants } from "./_app";
+import { opacityVariants } from "../Components/Layout";
 
 const Home: NextPage = () => {
     return (
@@ -36,40 +36,40 @@ const Home: NextPage = () => {
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
 
-            <main>
+            <main className="overflow-hidden">
                 <div className="h-screen">
                     <Welcome />
                 </div>
 
-                <m.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    variants={opacityVariants}
-                    className="h-screen p-3"
-                >
-                    <About />
-                </m.div>
+                <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:gap-x-[1.5vw] lg:gap-y-[1vh] lg:space-y-0">
+                    <m.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                        variants={opacityVariants}
+                        className="lg:border-r-2 lg:border-slate-800"
+                    >
+                        <About />
+                    </m.div>
+                    <m.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                        variants={opacityVariants}
+                    >
+                        <MyTech />
+                    </m.div>
 
-                <m.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    variants={opacityVariants}
-                    className="h-screen p-3"
-                >
-                    <MyTech />
-                </m.div>
-
-                <m.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    variants={opacityVariants}
-                    className="p-3 "
-                >
-                    <MyMentality />
-                </m.div>
+                    <m.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false }}
+                        variants={opacityVariants}
+                        className="lg:col-span-2 "
+                    >
+                        <MyMentality />
+                    </m.div>
+                </div>
             </main>
         </>
     );
