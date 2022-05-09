@@ -1,6 +1,6 @@
 import * as React from "react";
 import { m } from "framer-motion";
-import { opacityVariants } from "../../pages/_app";
+import { opacityVariants } from "../Layout";
 
 const Connect: React.FC = () => (
     <m.div
