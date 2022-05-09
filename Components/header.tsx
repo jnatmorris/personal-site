@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import { m, Variant } from "framer-motion";
 import { useRouter } from "next/router";
-import { opacityVariants } from "../pages/_app";
+import { opacityVariants } from "./Layout";
 
 const Header: React.FC = () => {
     const whileTapScale: Variant = {
