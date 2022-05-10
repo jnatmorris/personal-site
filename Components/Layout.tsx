@@ -18,9 +18,9 @@ const Layout: React.FC<Props> = ({ children }) => {
             <MotionConfig reducedMotion="user">
                 <div className="max-w-full prose scroll-smooth prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 dark:prose-invert">
                     <div className="bg-white dark:bg-black">
-                        <div className="mx-[3vw]  lg:mx-[5vw] ">
+                        <div className="mx-[3vw] lg:mx-[6vw] ">
                             {/* header */}
-                            <header className="mb-[17vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]">
+                            <header className="mb-[19vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]">
                                 <Header />
                             </header>
 
