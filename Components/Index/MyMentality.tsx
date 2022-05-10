@@ -7,13 +7,18 @@ const MyMentality: React.FC = () => (
         </h2>
 
         <h3 className="font-normal leading-normal lg:text-3xl lg:leading-loose">
-            Within the first{" "}
-            <span className="font-semibold text-red-400 "> five seconds</span>,
-            a user will choose to stay or leave. I design web sites where every{" "}
-            <span className="text-orange-500">half second</span> matters.
+            Whether carving your own niche in the market, building the next
+            Unicorn company, or competing with a monstrous company, within the
+            first{" "}
+            <span className="font-semibold text-red-400 ">ten seconds</span>, a
+            user will choose whether to click away.{" "}
+            <span className="text-blue-500 ">User retention</span> is
+            indispensible to succeed. I design and compose web sites where every{" "}
+            <span className="text-orange-500">second</span> that passes, could
+            be another closing of a purchase.
         </h3>
 
-        <ul className="list-outside lg:mt-[4vh] lg:text-3xl">
+        <ul className="mt-[2vh] list-outside lg:mt-[0vh] lg:text-3xl">
             <li>
                 <h4>
                     Fast load time -{" "}

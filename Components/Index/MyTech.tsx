@@ -10,7 +10,7 @@ const MyTech: React.FC = () => (
             flexible to trying something new. Here is what I&apos;m currently
             using:
         </h3>
-        <ul className="list-outside lg:mt-[4vh] lg:text-3xl">
+        <ul className="list-outside lg:text-3xl">
             <li>
                 <h4>
                     ReactJS -{" "}
