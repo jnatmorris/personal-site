@@ -74,25 +74,22 @@ const AboutPage: NextPage = () => {
                         </m.h1>
                     </m.div>
                 </div>
-                <m.div
-                    className="h-screen"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    variants={opacityVariants}
-                >
-                    <Doodler />
-                </m.div>
 
-                <m.div
-                    className="h-screen"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    variants={opacityVariants}
-                >
-                    <Pilot />
-                </m.div>
+                <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
+                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh] ">
+                        <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
+                            <Doodler />
+                        </div>
+
+                        <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
+                            <Pilot />
+                        </div>
+                    </div>
+
+                    <div className="lg:opacity-50 lg:hover:opacity-100">
+                        {/* <MyMentality /> */}
+                    </div>
+                </div>
             </main>
         </>
     );

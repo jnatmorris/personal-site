@@ -5,8 +5,7 @@ import Welcome from "../Components/Index/Welcome";
 import About from "../Components/Index/About";
 import MyMentality from "../Components/Index/MyMentality";
 import MyTech from "../Components/Index/MyTech";
-import { m } from "framer-motion";
-import { opacityVariants } from "../Components/Layout";
+
 
 const Home: NextPage = () => {
     return (
@@ -41,7 +40,10 @@ const Home: NextPage = () => {
                     <Welcome />
                 </div>
 
-                <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
+                <div
+                    className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0"
+                   
+                >
                     <div className="space-y-[15vh] lg:grid lg:grid-cols-2   lg:space-y-[0vh] ">
                         <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
                             <About />
