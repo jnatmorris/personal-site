@@ -1,27 +1,24 @@
 import * as React from "react";
+import Image from "next/image";
+import flight from "./flight.png";
 
 const Pilot = () => {
-    const [ImageLoaded, setImageLoaded] = React.useState(false);
-
     return (
         <div className="mx-3 shadow-md rounded-2xl bg-slate-100 ring-1 ring-slate-200 dark:bg-slate-700/60 dark:ring-slate-800">
             {/* pre-load images and to not have to load later */}
-            <img
-                src="flight.png"
-                alt="Pilot"
-                hidden={true}
-                onLoad={() => setImageLoaded(true)}
-            />
-            <div className="w-full overflow-hidden bg-white rounded-t-2xl">
-                {ImageLoaded ? (
-                    <img
-                        src="flight.png"
-                        alt="Pilot"
-                        className="m-0 rounded-t-xl"
-                    />
-                ) : (
-                    "Loading"
-                )}
+
+            <div className="relative w-full overflow-hidden bg-white rounded-t-2xl">
+                <Image
+                    src={flight}
+                    alt="Pilot"
+                    className="m-0 rounded-t-xl"
+                    placeholder="blur"
+                    width={3194}
+                    height={1528}
+                    quality={100}
+                    priority={true}
+                    layout="responsive"
+                />
             </div>
             <div className="px-2 pt-3">
                 <h3 className="m-0">Student pilot</h3>

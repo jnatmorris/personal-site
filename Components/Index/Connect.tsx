@@ -1,38 +1,46 @@
 import * as React from "react";
 import { m } from "framer-motion";
-import { opacityVariants } from "../Layout";
 
 const Connect: React.FC = () => (
-    <div className="mx-[2vw] pb-[2vh] opacity-100 lg:mx-[0vw]">
-        <h2 className="pb-[1vh] lg:pb-[2vh] lg:text-4xl">Want to Connect?</h2>
-        <div className="mx-[0.5vw] mt-1 flex justify-between prose-h3:m-0 lg:prose-h3:text-3xl">
-            <m.h3 whileTap={{ scale: 0.9 }}>
-                <a className="no-underline" href="https://github.com/JNat07">
+    <div className="mx-[2vw] pb-[2.5vh] opacity-100 lg:mx-[0vw]">
+        <h3 className="pb-[1vh] text-2xl underline decoration-sky-600 underline-offset-2 lg:text-4xl">
+            get to know me
+        </h3>
+
+        <div className="mx-[0.5vw] mt-1 flex justify-between prose-h3:m-0">
+            <m.h4 whileTap={{ scale: 0.9 }}>
+                <a
+                    className="text-xl no-underline hover:underline lg:text-2xl"
+                    href="https://github.com/JNat07"
+                >
                     GitHub
                 </a>
-            </m.h3>
-            <m.h3 whileTap={{ scale: 0.9 }}>
+            </m.h4>
+            <m.h4 whileTap={{ scale: 0.9 }}>
                 <a
-                    className="no-underline"
+                    className="text-xl no-underline hover:underline lg:text-2xl"
                     href="https://www.linkedin.com/in/justinnmorris/"
                 >
                     LinkedIn
                 </a>
-            </m.h3>
-            <m.h3 whileTap={{ scale: 0.9 }}>
-                <a className="no-underline" href="mailto:contact@jnmorris.dev">
+            </m.h4>
+            <m.h4 whileTap={{ scale: 0.9 }}>
+                <a
+                    className="text-xl no-underline hover:underline lg:text-2xl"
+                    href="mailto:contact@jnmorris.dev"
+                >
                     Email
                 </a>
-            </m.h3>
-            <m.h3 whileTap={{ scale: 0.9 }} className="relative">
+            </m.h4>
+            <m.h4 whileTap={{ scale: 0.9 }} className="relative">
                 <a
-                    className="no-underline"
+                    className="text-xl no-underline hover:underline lg:text-2xl"
                     href="CV.pdf"
                     download={"JustinMorrisResume"}
                 >
                     Resume
                 </a>
-            </m.h3>
+            </m.h4>
         </div>
     </div>
 );
