@@ -35,7 +35,7 @@ const Connect: React.FC = () => (
             <m.h4 whileTap={{ scale: 0.9 }} className="relative">
                 <a
                     className="text-xl no-underline hover:underline lg:text-2xl"
-                    href="CV.pdf"
+                    href="./CV/CV.pdf"
                     download={"JustinMorrisResume"}
                 >
                     Resume
