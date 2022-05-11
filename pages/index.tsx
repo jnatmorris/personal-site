@@ -2,9 +2,9 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Welcome from "../Components/Index/Welcome";
-import About from "../Components/Index/About";
+import Bio from "../Components/Index/Bio";
 import MyMentality from "../Components/Index/MyMentality";
-import MyTech from "../Components/Index/MyTech";
+import MyStack from "../Components/Index/MyStack";
 
 const Home: NextPage = () => {
     return (
@@ -42,11 +42,11 @@ const Home: NextPage = () => {
                 <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
                     <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh]">
                         <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
-                            <About />
+                            <Bio />
                         </div>
 
                         <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
-                            <MyTech />
+                            <MyStack />
                         </div>
                     </div>
 
