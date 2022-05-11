@@ -2,11 +2,25 @@ import * as React from "react";
 import Link from "next/link";
 import { m, Variant } from "framer-motion";
 import { useRouter } from "next/router";
-import { opacityVariants } from "./Layout";
 
 const Header: React.FC = () => {
-    const whileTapScale: Variant = {
+    const ScaleVariant: Variant = {
         scale: 0.9,
+    };
+
+    const opacityVariants = {
+        hidden: {
+            opacity: 0,
+            transition: {
+                duration: 0.75,
+            },
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.75,
+            },
+        },
     };
 
     const route = useRouter();
@@ -20,13 +34,13 @@ const Header: React.FC = () => {
             className="grid"
         >
             <div className="space-x-5 justify-self-end">
-                <m.button whileTap={whileTapScale}>
+                <m.button whileTap={ScaleVariant}>
                     <Link href={"/"}>
                         <a
                             className={
                                 route.pathname === "/"
-                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-3xl"
-                                    : "text-xl no-underline lg:text-3xl"
+                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
+                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
                             }
                         >
                             Home
@@ -34,13 +48,13 @@ const Header: React.FC = () => {
                     </Link>
                 </m.button>
 
-                <m.button whileTap={whileTapScale}>
+                <m.button whileTap={ScaleVariant}>
                     <Link href={"/about"}>
                         <a
                             className={
                                 route.pathname === "/about"
-                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-3xl"
-                                    : "text-xl no-underline lg:text-3xl"
+                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
+                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
                             }
                         >
                             About
