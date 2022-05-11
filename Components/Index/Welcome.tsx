@@ -29,17 +29,29 @@ const Welcome = () => {
                 </h1>
                 <h1 className="lg:text-5xl">&#x1F44B;</h1>
             </m.div>
-            <div className="ml-[2vw] lg:mt-[1vh] lg:space-y-2">
-                <m.h2 className="lg:text-4xl" variants={item}>
+            <div className="ml-[1.5vw] lg:mt-[1vh] lg:space-y-2">
+                <m.h2
+                    className="text-slate-600 hover:font-bold lg:text-3xl"
+                    variants={item}
+                >
                     I&apos;m Justin Morris. A...
                 </m.h2>
-                <m.h3 variants={item} className="font-normal lg:text-3xl">
+                <m.h3
+                    variants={item}
+                    className="font-normal lg:text-3xl lg:hover:font-semibold"
+                >
                     - Computer science student
                 </m.h3>
-                <m.h3 variants={item} className="font-normal lg:text-3xl">
+                <m.h3
+                    variants={item}
+                    className="font-normal lg:text-3xl lg:hover:font-semibold"
+                >
                     - Web developer
                 </m.h3>
-                <m.h3 variants={item} className="font-normal lg:text-3xl">
+                <m.h3
+                    variants={item}
+                    className="font-normal lg:text-3xl lg:hover:font-semibold"
+                >
                     - And builder of things
                 </m.h3>
             </div>
