@@ -21,7 +21,7 @@ const Welcome = () => {
             variants={Variants}
             animate={"show"}
             initial={"hidden"}
-            className="ml-[4vw]prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 lg:ml-[1vw] "
+            className="ml-[4vw] lg:ml-[1vw] "
         >
             <m.div variants={item} className="flex pb-3 space-x-2">
                 <h1 className="font-bold underline decoration-blue-400 underline-offset-2 lg:text-5xl">
