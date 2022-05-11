@@ -19,23 +19,23 @@ const HeaderAbout = () => {
 
     return (
         <m.div
-            className="ml-[5vw] px-2"
+            className="ml-[5vw] space-y-[1vh] px-2"
             variants={Variants}
             animate={"show"}
             initial={"hidden"}
         >
             <m.h1
                 variants={item}
-                className="underline decoration-blue-400 underline-offset-2 lg:text-5xl"
+                className="font-bold underline decoration-blue-400 underline-offset-2 lg:text-4xl"
             >
                 Uni student
             </m.h1>
-            <m.h2 className="py-[2vh] font-normal lg:text-3xl" variants={item}>
+            <m.h2 className="font-normal lg:text-3xl" variants={item}>
                 and
             </m.h2>
             <m.h1
                 variants={item}
-                className="underline decoration-blue-400 underline-offset-2 lg:text-5xl"
+                className="font-bold underline decoration-blue-400 underline-offset-2 lg:text-4xl"
             >
                 Web developer
             </m.h1>
