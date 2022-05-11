@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const MyTech: React.FC = () => (
+const MyStack: React.FC = () => (
     <>
         <h3 className="pb-[1vh] text-2xl  underline decoration-sky-600 underline-offset-2 lg:text-4xl">
             my stack
@@ -30,4 +30,4 @@ const MyTech: React.FC = () => (
     </>
 );
 
-export default MyTech;
+export default MyStack;
