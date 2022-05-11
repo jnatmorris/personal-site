@@ -1,12 +1,7 @@
 import * as React from "react";
 import Header from "../Components/header";
-import Connect from "../Components/Index/Connect";
-import {
-    LazyMotion,
-    MotionConfig,
-    domAnimation,
-    Variants,
-} from "framer-motion";
+import Connect from "./Connect";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 
 interface Props {
     children: React.ReactNode;
@@ -40,18 +35,3 @@ const Layout: React.FC<Props> = ({ children }) => {
 };
 
 export default Layout;
-
-export const opacityVariants: Variants = {
-    hidden: {
-        opacity: 0.2,
-        transition: {
-            duration: 0,
-        },
-    },
-    visible: {
-        opacity: 1,
-        transition: {
-            duration: 1,
-        },
-    },
-};
