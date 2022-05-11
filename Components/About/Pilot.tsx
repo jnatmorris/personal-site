@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import flight from "./flight.png";
+import flight from "./img/flight.png";
 
 const Pilot = () => {
     return (

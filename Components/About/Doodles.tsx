@@ -1,11 +1,11 @@
 import * as React from "react";
 import { m, Variants, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import bf109 from "./doodles/bf109.png";
-import train from "./doodles/train.png";
-import t33 from "./doodles/t33.png";
-import shuttle from "./doodles/shuttle.png";
-import gus from "./doodles/gus.png";
+import bf109 from "./img/doodles/bf109.png";
+import train from "./img/doodles/train.png";
+import t33 from "./img/doodles/t33.png";
+import shuttle from "./img/doodles/shuttle.png";
+import gus from "./img/doodles/gus.png";
 
 const Doodler: React.FC = () => {
     const [activeImage, setActiveImg] = React.useState<number>(1);
