@@ -28,7 +28,7 @@ const HeaderAbout = () => {
                 variants={item}
                 className="font-bold underline decoration-blue-400 underline-offset-2 lg:text-4xl"
             >
-                Uni student
+                Friends
             </m.h1>
             <m.h2 className="font-normal lg:text-3xl" variants={item}>
                 and
@@ -37,7 +37,7 @@ const HeaderAbout = () => {
                 variants={item}
                 className="font-bold underline decoration-blue-400 underline-offset-2 lg:text-4xl"
             >
-                Web developer
+                Exercise
             </m.h1>
         </m.div>
     );
