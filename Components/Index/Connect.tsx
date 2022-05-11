@@ -27,7 +27,7 @@ const Connect: React.FC = () => (
             <m.h4 whileTap={{ scale: 0.9 }}>
                 <a
                     className="text-xl no-underline hover:underline lg:text-2xl"
-                    href="mailto:contact@jnmorris.dev"
+                    href="mailto:justin@jnmorris.dev"
                 >
                     Email
                 </a>
