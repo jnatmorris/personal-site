@@ -5,6 +5,7 @@ import Welcome from "../Components/Index/Welcome";
 import Bio from "../Components/About/AboutHeader";
 import MyMentality from "../Components/Index/MyMentality";
 import MyStack from "../Components/Index/MyStack";
+import ImLearning from "../Components/Index/ImLearning";
 
 const Home: NextPage = () => {
     return (
@@ -39,15 +40,18 @@ const Home: NextPage = () => {
                     <Welcome />
                 </div>
 
-                <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
-                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh]">
-                        <div className="lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100">
+                <div className="space-y-[15vh]  lg:space-y-[1vh]">
+                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:gap-y-[4vh] lg:space-y-[0vh]">
+                        <div className="place-self-center lg:border-r-2 lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100">
                             <MyStack />
                         </div>
-                    </div>
-
-                    <div className="lg:opacity-50 lg:hover:opacity-100">
-                        <MyMentality />
+                        <div className="place-self-center lg:border-l-2 lg:border-gray-200 lg:pl-[1vw]  lg:opacity-50 lg:hover:opacity-100">
+                            <ImLearning />
+                        </div>
+                        <div className="w-full lg:col-span-2 lg:h-0.5 lg:bg-gray-200" />
+                        <div className="lg:col-span-2 lg:opacity-50 lg:hover:opacity-100">
+                            <MyMentality />
+                        </div>
                     </div>
                 </div>
             </main>
