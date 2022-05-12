@@ -52,7 +52,7 @@ const Welcome = () => {
                     variants={item}
                     className="font-normal lg:text-3xl lg:hover:font-semibold"
                 >
-                    - And digital world resident
+                    - And digital resident
                 </m.h3>
             </div>
         </m.div>
