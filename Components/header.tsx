@@ -1,9 +1,12 @@
 import * as React from "react";
 import Link from "next/link";
 import { m, Variant } from "framer-motion";
-import { useRouter } from "next/router";
 
-const Header: React.FC = () => {
+interface Props {
+    route: string;
+}
+
+const Header: React.FC<Props> = ({ route }) => {
     const ScaleVariant: Variant = {
         scale: 0.9,
     };
@@ -23,8 +26,6 @@ const Header: React.FC = () => {
         },
     };
 
-    const route = useRouter();
-
     return (
         <m.div
             initial="hidden"
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
                     <Link href={"/"}>
                         <a
                             className={
-                                route.pathname === "/"
+                                route === "/"
                                     ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
                                     : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
                             }
@@ -52,7 +53,7 @@ const Header: React.FC = () => {
                     <Link href={"/about"}>
                         <a
                             className={
-                                route.pathname === "/about"
+                                route === "/about"
                                     ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
                                     : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
                             }
