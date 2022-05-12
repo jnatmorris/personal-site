@@ -2,7 +2,7 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Welcome from "../Components/Index/Welcome";
-import Bio from "../Components/Index/Bio";
+import Bio from "../Components/About/AboutHeader";
 import MyMentality from "../Components/Index/MyMentality";
 import MyStack from "../Components/Index/MyStack";
 
@@ -41,11 +41,7 @@ const Home: NextPage = () => {
 
                 <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
                     <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh]">
-                        <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
-                            <Bio />
-                        </div>
-
-                        <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
+                        <div className="lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100">
                             <MyStack />
                         </div>
                     </div>
