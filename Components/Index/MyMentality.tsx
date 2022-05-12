@@ -2,22 +2,18 @@ import * as React from "react";
 
 const MyMentality: React.FC = () => (
     <>
-        <h3 className="pb-[1vh] text-2xl underline decoration-sky-600 underline-offset-2 lg:text-4xl">
-            my mentality
-        </h3>
+        <h3 className="pb-[1vh] text-2xl lg:text-4xl">My mentality</h3>
 
         <h4 className="text-xl font-normal leading-relaxed lg:text-2xl lg:leading-loose">
             Whether carving your own niche in the market, building the next
             Unicorn company, or competing with a monstrous company, within the
-            first <span className="text-red-500 ">ten seconds</span>, a user
+            first <span className="text-orange-600 ">ten seconds</span>, a user
             will choose whether to click away.{" "}
-            <span className="font-semibold underline text-cyan-600">
-                User retention
-            </span>{" "}
+            <span className="font-semibold text-blue-300">User retention</span>{" "}
             is indispensible to succeed. I design and compose web sites that
             feel modern while not bloating bundle sizes as every{" "}
-            <span className="text-orange-600">second</span> that passes, could
-            be a lost customer.
+            <span className="font-semibold text-yellow-400">second</span> that
+            passes, could be a lost customer.
         </h4>
 
         <ul className="mt-[2vh] list-outside text-lg lg:mt-[0vh] lg:text-2xl ">
