@@ -23,11 +23,17 @@ const Welcome = () => {
             initial={"hidden"}
             className="ml-[4vw] lg:ml-[1vw] "
         >
-            <m.div variants={item} className="flex pb-3 space-x-2">
+            <m.div variants={item} className="flex space-x-2 pb-3">
                 <h1 className="font-bold underline decoration-blue-400 underline-offset-2 lg:text-5xl">
                     Welcome,
                 </h1>
-                <h1 className="lg:text-5xl">&#x1F44B;</h1>
+                <m.h1
+                    whileHover={{ rotate: [0, -40, 40, -40, 0] }}
+                    transition={{ duration: 1.7, ease: "linear" }}
+                    className="origin-bottom lg:text-5xl"
+                >
+                    &#x1F44B;
+                </m.h1>
             </m.div>
             <div className="ml-[1.5vw] lg:mt-[1vh] lg:space-y-2">
                 <m.h2
