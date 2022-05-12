@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Doodler from "../Components/About/Doodles";
 import Pilot from "../Components/About/Pilot";
-import HeaderAbout from "../Components/About/HeaderAbout";
+import About from "../Components/About/AboutHeader";
 
 const AboutPage: NextPage = () => {
     return (
@@ -30,9 +30,9 @@ const AboutPage: NextPage = () => {
                 />
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
-            <main>
+            <main className="overflow-hidden">
                 <div className="h-screen">
-                    <HeaderAbout />
+                    <About />
                 </div>
 
                 <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
@@ -44,10 +44,6 @@ const AboutPage: NextPage = () => {
                         <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
                             <Pilot />
                         </div>
-                    </div>
-
-                    <div className="lg:opacity-50 lg:hover:opacity-100">
-                        {/* <MyMentality /> */}
                     </div>
                 </div>
             </main>
