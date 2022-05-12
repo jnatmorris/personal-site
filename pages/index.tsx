@@ -2,10 +2,9 @@ import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Welcome from "../Components/Index/Welcome";
-import Bio from "../Components/About/AboutHeader";
 import MyMentality from "../Components/Index/MyMentality";
 import MyStack from "../Components/Index/MyStack";
-import ImLearning from "../Components/Index/ImLearning";
+import OnMyRadar from "../Components/Index/OnMyRadar";
 
 const Home: NextPage = () => {
     return (
@@ -46,7 +45,7 @@ const Home: NextPage = () => {
                             <MyStack />
                         </div>
                         <div className="place-self-center lg:border-l-2 lg:border-gray-200 lg:pl-[1vw]  lg:opacity-50 lg:hover:opacity-100">
-                            <ImLearning />
+                            <OnMyRadar />
                         </div>
                         <div className="w-full lg:col-span-2 lg:h-0.5 lg:bg-gray-200" />
                         <div className="lg:col-span-2 lg:opacity-50 lg:hover:opacity-100">
