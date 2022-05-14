@@ -1,12 +1,11 @@
 import * as React from "react";
 import Link from "next/link";
 import { m, Variant } from "framer-motion";
+import { useRouter } from "next/router";
 
-interface Props {
-    route: string;
-}
+const Header: React.FC = () => {
+    const route = useRouter();
 
-const Header: React.FC<Props> = ({ route }) => {
     const ScaleVariant: Variant = {
         scale: 0.9,
     };
@@ -15,13 +14,13 @@ const Header: React.FC<Props> = ({ route }) => {
         hidden: {
             opacity: 0,
             transition: {
-                duration: 0.75,
+                duration: 0.25,
             },
         },
         visible: {
             opacity: 1,
             transition: {
-                duration: 0.75,
+                duration: 0.25,
             },
         },
     };
@@ -39,9 +38,9 @@ const Header: React.FC<Props> = ({ route }) => {
                     <Link href={"/"}>
                         <a
                             className={
-                                route === "/"
-                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
-                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
+                                route.pathname === "/"
+                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-3xl"
+                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-3xl"
                             }
                         >
                             Home
@@ -53,9 +52,9 @@ const Header: React.FC<Props> = ({ route }) => {
                     <Link href={"/about"}>
                         <a
                             className={
-                                route === "/about"
-                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
-                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
+                                route.pathname === "/about"
+                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-3xl"
+                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-3xl"
                             }
                         >
                             About
