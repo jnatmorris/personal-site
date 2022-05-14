@@ -1,9 +1,9 @@
 import * as React from "react";
 import Image from "next/image";
-import me from "./img/Me/me.jpg";
+import me from "./img/me.jpg";
 import { m } from "framer-motion";
 
-const About: React.FC = () => (
+const AboutMe: React.FC = () => (
     <div>
         <h1 className="text-3xl font-semibold lg:hidden">
             Hey I&apos;m Justin,
@@ -12,7 +12,7 @@ const About: React.FC = () => (
             <div className="my-[3vh] lg:mt-[1vh]">
                 <m.div
                     className="relative w-full origin-center"
-                    whileHover={{ scale: 0.95 }}
+                    whileHover={{ scale: 0.98 }}
                     initial={{ opacity: 0.2 }}
                     animate={{ opacity: 1 }}
                 >
@@ -24,7 +24,6 @@ const About: React.FC = () => (
                         priority={true}
                         layout="responsive"
                         className="rounded-xl "
-                        // objectFit="contain"
                         quality={100}
                         alt="Justin"
                     />
@@ -35,19 +34,19 @@ const About: React.FC = () => (
                     Hey I&apos;m Justin,
                 </h1>
 
-                <h2 className="h-min text-2xl font-normal leading-normal lg:text-3xl lg:leading-loose ">
+                <h2 className="text-2xl font-normal leading-normal h-min lg:text-3xl lg:leading-loose ">
                     I&apos;m a front-end{" "}
-                    <span className="underline decoration-slate-500 underline-offset-1">
+                    <span className="underline decoration-sky-400 underline-offset-1">
                         {" "}
                         ReactJS
                     </span>{" "}
                     web developer and computer science student at Jacobs
                     University in Bremen Germany. While originally from Chicago
-                    IL, &apos;m now located in New York City and Bremen.
+                    IL, now based in New York City and Bremen.
                 </h2>
             </div>
         </div>
     </div>
 );
 
-export default About;
+export default AboutMe;
