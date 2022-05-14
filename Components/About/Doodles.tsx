@@ -22,11 +22,6 @@ const Doodler: React.FC = () => {
             },
         },
 
-        firstLoad: {
-            opacity: 1,
-            height: "fit-content",
-        },
-
         show: {
             opacity: 1,
             height: "fit-content",
