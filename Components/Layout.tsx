@@ -1,38 +1,50 @@
 import * as React from "react";
-import Header from "../Components/header";
+import Header from "./Navigation";
 import Connect from "./Connect";
+import Head from "next/head";
 import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
-import { useRouter } from "next/router";
 
 interface Props {
     children: React.ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
-    const route = useRouter();
-
     return (
         <LazyMotion strict features={domAnimation}>
             <MotionConfig reducedMotion="user">
-                <div className="prose max-w-full prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 dark:prose-invert">
+                <Head>
+                    <link
+                        rel="apple-touch-icon"
+                        sizes="180x180"
+                        href="/icons/apple-touch-icon.png"
+                    />
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        sizes="32x32"
+                        href="/icons/favicon-32x32.png"
+                    />
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        sizes="16x16"
+                        href="/icons/favicon-16x16.png"
+                    />
+                    <link rel="manifest" href="/site.webmanifest" />
+                </Head>
+                <div className="max-w-full prose prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 dark:prose-invert">
                     <div className="bg-white dark:bg-black">
-                        <div className="mx-[4vw] lg:mx-[10vw] ">
+                        <div className="relative mx-[4vw] lg:mx-[10vw] ">
                             {/* header */}
-                            <header
-                                className={
-                                    route.pathname === "/about"
-                                        ? "mb-[12vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]"
-                                        : "mb-[19vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]"
-                                }
-                            >
-                                <Header route={route.pathname} />
+                            <header className="mb-[12vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]">
+                                <Header />
                             </header>
 
                             {/* rest of page */}
-                            <main>{children}</main>
+                            <main className="mb-[5vh]">{children}</main>
 
                             {/* footer */}
-                            <footer className="mt-[15vh] lg:mt-[10vh]">
+                            <footer className="">
                                 <Connect />
                             </footer>
                         </div>
