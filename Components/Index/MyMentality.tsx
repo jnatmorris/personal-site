@@ -42,7 +42,7 @@ const MyMentality: React.FC = () => (
                     that passes, could be a lost customer.
                 </h4>
 
-                <ul className="mt-[2vh] list-outside text-lg lg:mt-[0vh] lg:text-xl ">
+                <ul className="mt-[2vh] list-outside text-lg lg:mt-[0vh] lg:text-xl">
                     <li>
                         <h5>
                             Fast load time -{" "}
