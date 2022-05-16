@@ -15,7 +15,7 @@ const Home: NextPage = () => {
                 <meta name="description" content="Justin's Personal Site" />
             </Head>
 
-            <div className="h-screen ">
+            <div className="h-screen">
                 <div className="pt-[15vh] lg:pt-[25vh]">
                     <AboutMe />
                 </div>
