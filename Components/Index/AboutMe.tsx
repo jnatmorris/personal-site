@@ -36,7 +36,7 @@ const AboutMe: React.FC = () => (
 
                 <h2 className="text-2xl font-normal leading-normal h-min lg:leading-relaxed">
                     I&apos;m a front-end{" "}
-                    <span className="underline decoration-sky-400 underline-offset-1">
+                    <span className="underline decoration-sky-400 underline-offset-1 hover:decoration-sky-600">
                         {" "}
                         ReactJS
                     </span>{" "}
