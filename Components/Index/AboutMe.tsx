@@ -34,7 +34,7 @@ const AboutMe: React.FC = () => (
                     Hey I&apos;m Justin,
                 </h1>
 
-                <h2 className="text-2xl font-normal leading-normal h-min lg:text-3xl lg:leading-loose ">
+                <h2 className="text-2xl font-normal leading-normal h-min lg:text-3xl lg:leading-relaxed">
                     I&apos;m a front-end{" "}
                     <span className="underline decoration-sky-400 underline-offset-1">
                         {" "}
