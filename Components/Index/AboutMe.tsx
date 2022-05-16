@@ -23,7 +23,7 @@ const AboutMe: React.FC = () => (
                         placeholder="blur"
                         priority={true}
                         layout="responsive"
-                        className="rounded-xl "
+                        className="rounded-2xl"
                         quality={100}
                         alt="Justin"
                     />
