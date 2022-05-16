@@ -23,7 +23,7 @@ const MyStack: React.FC = () => (
                 </h2>
             </div>
 
-            <h4 className="text-xl font-normal leading-relaxed">
+            <h4 className="text-xl font-normal leading-relaxed lg:leading-loose">
                 While I have my personal preferences, I&apos;m always looking to
                 learn and experiment with new technologies. Believer that each
                 project has it&apos;s own set of tools.
