@@ -32,11 +32,11 @@ const Layout: React.FC<Props> = ({ children }) => {
                     />
                     <link rel="manifest" href="/site.webmanifest" />
                 </Head>
-                <div className="max-w-full prose prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 dark:prose-invert">
+                <div className="max-w-full prose prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 dark:prose-invert ">
                     <div className="bg-white dark:bg-black">
-                        <div className="relative mx-[4vw] lg:mx-[10vw] ">
+                        <div className="relative mx-[4vw] lg:mx-[10vw]">
                             {/* header */}
-                            <header className="mb-[12vh] pt-[1vh] lg:mb-[22vh] lg:pt-[2vh]">
+                            <header className="pt-[1vh] lg:pt-[2vh]">
                                 <Header />
                             </header>
 
@@ -44,7 +44,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                             <main className="mb-[5vh]">{children}</main>
 
                             {/* footer */}
-                            <footer className="">
+                            <footer className="mt-[25vh]">
                                 <Connect />
                             </footer>
                         </div>
