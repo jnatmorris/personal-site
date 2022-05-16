@@ -29,27 +29,25 @@ const MyStack: React.FC = () => (
                 project has it&apos;s own set of tools.
             </h4>
 
-            <div className="mt-[5vh]">
-                <ul className="text-xl list-outside lg:text-2xl">
-                    <li>
-                        <h5>
-                            ReactJS -{" "}
-                            <span className="font-normal opacity-[0.6]">
-                                NextJS
-                            </span>
-                        </h5>
-                    </li>
-                    <li>
-                        <h5>Typescript</h5>
-                    </li>
-                    <li>
-                        <h5>TailwindCSS</h5>
-                    </li>
-                    <li>
-                        <h5>framer-motion</h5>
-                    </li>
-                </ul>
-            </div>
+            <ul className="mt-[2vh] list-outside text-lg lg:mt-[0vh] lg:text-xl">
+                <li>
+                    <h5>
+                        ReactJS -{" "}
+                        <span className="font-normal opacity-[0.6]">
+                            NextJS
+                        </span>
+                    </h5>
+                </li>
+                <li>
+                    <h5>Typescript</h5>
+                </li>
+                <li>
+                    <h5>TailwindCSS</h5>
+                </li>
+                <li>
+                    <h5>framer-motion</h5>
+                </li>
+            </ul>
         </div>
     </div>
 );
