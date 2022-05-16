@@ -4,7 +4,7 @@ import Head from "next/head";
 
 import MyMentality from "../Components/Index/MyMentality";
 import MyStack from "../Components/Index/MyStack";
-import OnMyRadar from "../Components/Index/OnMyRadar";
+
 import AboutMe from "../Components/Index/AboutMe";
 
 const Home: NextPage = () => {
@@ -13,29 +13,20 @@ const Home: NextPage = () => {
             <Head>
                 <title>Justin Morris</title>
                 <meta name="description" content="Justin's Personal Site" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="overflow-hidden">
-                <div className="h-screen">
+            <div className="h-screen ">
+                <div className="pt-[15vh] lg:pt-[25vh]">
                     <AboutMe />
                 </div>
+            </div>
 
-                <div className="space-y-[15vh]  lg:space-y-[1vh]">
-                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:gap-y-[4vh] lg:space-y-[0vh]">
-                        <div className="place-self-center lg:opacity-50 lg:hover:opacity-100">
-                            <MyStack />
-                        </div>
-                        <div className="place-self-center lg:opacity-50 lg:hover:opacity-100">
-                            <OnMyRadar />
-                        </div>
-                        <div className="w-full lg:col-span-2 lg:h-0.5 lg:bg-gray-200" />
-                        <div className="lg:col-span-2 lg:opacity-50 lg:hover:opacity-100">
-                            <MyMentality />
-                        </div>
-                    </div>
-                </div>
-            </main>
+            <div className="mb-[4vh] h-0.5 rounded-lg bg-slate-300" />
+            <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:gap-[1vw] lg:space-y-[0vh] ">
+                <MyMentality />
+
+                <MyStack />
+            </div>
         </>
     );
 };
