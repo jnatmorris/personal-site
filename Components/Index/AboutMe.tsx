@@ -29,7 +29,7 @@ const AboutMe: React.FC = () => (
                     />
                 </m.div>
             </div>
-            <div className="py-[1vh]  lg:place-self-center">
+            <div className="py-[1vh] lg:place-self-center">
                 <h1 className="hidden font-semibold lg:block lg:text-3xl">
                     Hey I&apos;m Justin,
                 </h1>

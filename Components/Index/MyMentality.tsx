@@ -26,7 +26,7 @@ const MyMentality: React.FC = () => (
 
         <div className="grid:cols-2 lg:grid">
             <div>
-                <h4 className="text-xl font-normal leading-relaxed lg:text-2xl lg:leading-loose">
+                <h4 className="text-xl font-normal leading-relaxed lg:leading-loose">
                     If carving a niche in the market or building the next
                     Unicorn company, within the first{" "}
                     <span className="text-orange-600 ">ten seconds</span>, a
