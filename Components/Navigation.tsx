@@ -39,8 +39,8 @@ const Header: React.FC = () => {
                         <a
                             className={
                                 route.pathname === "/"
-                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-3xl"
-                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-3xl"
+                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
+                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
                             }
                         >
                             Home
@@ -53,8 +53,8 @@ const Header: React.FC = () => {
                         <a
                             className={
                                 route.pathname === "/about"
-                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-3xl"
-                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-3xl"
+                                    ? "text-xl decoration-sky-500 underline-offset-2 lg:text-2xl"
+                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80 lg:text-2xl"
                             }
                         >
                             About
