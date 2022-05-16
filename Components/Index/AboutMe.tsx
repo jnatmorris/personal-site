@@ -30,11 +30,11 @@ const AboutMe: React.FC = () => (
                 </m.div>
             </div>
             <div className="py-[1vh]  lg:place-self-center">
-                <h1 className="hidden font-semibold lg:block lg:text-4xl">
+                <h1 className="hidden font-semibold lg:block lg:text-3xl">
                     Hey I&apos;m Justin,
                 </h1>
 
-                <h2 className="text-2xl font-normal leading-normal h-min lg:text-3xl lg:leading-relaxed">
+                <h2 className="text-3xl font-normal leading-normal h-min lg:text-3xl lg:leading-relaxed">
                     I&apos;m a front-end{" "}
                     <span className="underline decoration-sky-400 underline-offset-1">
                         {" "}
