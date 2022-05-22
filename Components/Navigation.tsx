@@ -3,7 +3,7 @@ import Link from "next/link";
 import { m, Variant } from "framer-motion";
 import { useRouter } from "next/router";
 
-const Header: React.FC = () => {
+const Navigation: React.FC = () => {
     const route = useRouter();
 
     const ScaleVariant: Variant = {
@@ -26,12 +26,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <m.div
+        <m.header
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
             variants={opacityVariants}
-            className="grid"
+            className="mx-[5vw] mt-[2vh] grid"
         >
             <div className="space-x-5 justify-self-end">
                 <m.button whileTap={ScaleVariant}>
@@ -62,8 +62,8 @@ const Header: React.FC = () => {
                     </Link>
                 </m.button>
             </div>
-        </m.div>
+        </m.header>
     );
 };
 
-export default Header;
+export default Navigation;
