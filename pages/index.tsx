@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             </Head>
 
             <Parallax pages={5} className="bg-white dark:bg-black">
-                <ParallaxLayer offset={0} sticky={{ start: 0, end: 0.3 }}>
+                <ParallaxLayer offset={0.2} sticky={{ start: 0, end: 0.3 }}>
                     <Navigation />
                 </ParallaxLayer>
                 <ParallaxLayer
