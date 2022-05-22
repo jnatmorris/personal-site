@@ -8,11 +8,11 @@ const AboutMe: React.FC = () => (
         <h1 className="text-3xl font-semibold lg:hidden">
             Hey I&apos;m Justin,
         </h1>
+
         <div className="gap-x-[2vw] lg:mx-[4vw] lg:grid lg:grid-cols-2">
             <div className="my-[3vh] lg:mt-[1vh]">
                 <m.div
                     className="relative w-full origin-center"
-                    whileHover={{ scale: 0.98 }}
                     initial={{ opacity: 0.2 }}
                     animate={{ opacity: 1 }}
                 >
