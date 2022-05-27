@@ -9,7 +9,7 @@ import FlagGameLobbyDark from "../../img/FlagGameLobbyDark.png";
 import FlagGameLobbyLight from "../../img/FlagGameLobbyLight.png";
 
 const FlagGameGame: React.FC = () => (
-    <div className="w-1/2 place-self-end ">
+    <div className="lg:w-1/2 lg:place-self-end ">
         <div className="hidden dark:block">
             <Image
                 layout="responsive"
@@ -38,7 +38,7 @@ const FlagGameGame: React.FC = () => (
 );
 
 const FlagGameLobby: React.FC = () => (
-    <div className="w-1/2 place-self-center">
+    <div className="lg:w-1/2 lg:place-self-center">
         <div className="hidden shadow-2xl dark:block">
             <Image
                 layout="responsive"
