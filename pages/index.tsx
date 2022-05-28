@@ -62,7 +62,7 @@ const Home: NextPage = () => {
                             }
                             className="lg:grid lg:grid-cols-2"
                         >
-                            <div className="ml-[5vw] lg:col-span-1  lg:place-items-center lg:pt-[30vh]">
+                            <div className="ml-[5vw] lg:col-span-1  lg:place-items-center lg:self-center">
                                 <ChatApp />
                             </div>
                         </ParallaxLayer>
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                             }
                             className="lg:grid lg:grid-cols-2"
                         >
-                            <div className="mx-[10vw] ml-[5vw] lg:col-span-1 lg:place-items-center lg:pt-[30vh] ">
+                            <div className="mx-[10vw] lg:col-span-1  lg:self-center">
                                 <FlagGame />
                             </div>
                         </ParallaxLayer>

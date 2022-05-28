@@ -13,6 +13,11 @@ import { DeviceWidth } from "../Components/Layout";
 const AboutPage: NextPage = () => {
     const ref = React.useRef<IParallax>(null!);
 
+    const [endTypingHeader, setEndTypingHeader] =
+        React.useState<boolean>(false);
+    const [endTypingCoding, setEndTypingCoding] =
+        React.useState<boolean>(false);
+
     return (
         <>
             <Head>
@@ -23,54 +28,99 @@ const AboutPage: NextPage = () => {
             <DeviceWidth.Consumer>
                 {(width) => (
                     <Parallax pages={width > 640 ? 2 : 3} ref={ref}>
-                        <ParallaxLayer
-                            offset={0}
-                            sticky={{ start: 0, end: 3 > 640 ? 0.3 : 0.15 }}
-                        >
+                        <ParallaxLayer offset={0}>
                             <Navigation />
                         </ParallaxLayer>
 
-                        <ParallaxLayer offset={0.3} speed={2}>
-                            <div className="mx-[10vw]">
+                        <ParallaxLayer offset={0.3} speed={4}>
+                            <div className="1 mx-[10vw] ">
                                 <TypeWriter
                                     string="About&nbsp;me&nbsp;"
                                     options={{
                                         stringClass:
-                                            "text-slate-600 text-5xl lg:text-8xl",
+                                            "text-slate-600 text-5xl lg:text-8xl ",
                                         outerDivClass: "",
                                         font: "Courgette, cursive",
-                                        delayWrite: 2,
+                                        timeBetweenLetters: 0.2,
                                         showCursor: true,
                                         cursorColor: "bg-gray-400 ",
-                                        infiniteCCursor: true,
-                                        onComplete: () =>
-                                            setTimeout(function () {
-                                                // fails if user clicks to main page while waiting a second
-                                                try {
-                                                    ref.current.scrollTo(0.5);
-                                                } catch {}
-                                            }, 1000),
+                                        removeCursorOnComplete: true,
+                                        onComplete: () => {
+                                            try {
+                                                setEndTypingHeader(true);
+                                            } catch {}
+                                        },
                                     }}
                                 />
+                                {endTypingHeader && (
+                                    <TypeWriter
+                                        string="My&nbsp;coding"
+                                        options={{
+                                            stringClass:
+                                                "text-slate-600 text-2xl lg:text-4xl hover:underline hover:decoration-sky-200 hover:underline-offset-1",
+                                            outerDivClass: "ml-5 mt-5",
+                                            font: "Courgette, cursive",
+                                            timeBetweenLetters: 0.1,
+                                            cursorColor: "bg-gray-400 ",
+                                            removeCursorOnComplete: true,
+                                            showCursor: true,
+
+                                            onClick: () => {
+                                                try {
+                                                    ref.current.scrollTo(1);
+                                                } catch {}
+                                            },
+                                            onComplete: () => {
+                                                try {
+                                                    setEndTypingCoding(true);
+                                                } catch {}
+                                            },
+                                        }}
+                                    />
+                                )}
+
+                                {endTypingCoding && (
+                                    <TypeWriter
+                                        string="Personal"
+                                        options={{
+                                            stringClass:
+                                                "text-slate-600 text-2xl lg:text-4xl hover:underline hover:decoration-sky-200 hover:underline-offset-1",
+                                            outerDivClass: "ml-5 mt-5",
+                                            font: "Courgette, cursive",
+                                            showCursor: true,
+                                            removeCursorOnComplete: true,
+                                            cursorColor: "bg-gray-400 ",
+
+                                            timeBetweenLetters: 0.1,
+
+                                            onClick: () =>
+                                                ref.current.scrollTo(2),
+                                        }}
+                                    />
+                                )}
                             </div>
                         </ParallaxLayer>
 
-                        <ParallaxLayer
-                            offset={width > 640 ? 1.25 : 1}
-                            speed={1}
-                        >
-                            <div className="mx-[10vw] lg:grid lg:grid-cols-2 lg:gap-x-6">
+                        <ParallaxLayer offset={1} speed={1.5}>
+                            <div className="mx-[5vw] space-y-5 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
                                 <MyMentality />
+                                <MyStack />
                             </div>
                         </ParallaxLayer>
 
-                        <ParallaxLayer
-                            speed={1.25}
-                            offset={width > 640 ? 1.25 : 2}
-                        >
-                            <div className="mx-[10vw] lg:grid lg:grid-cols-2 lg:gap-x-6">
-                                <div />
-                                <MyStack />
+                        <ParallaxLayer offset={2} speed={1}>
+                            <div className="w-screen">
+                                <div className=" space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
+                                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh] ">
+                                        <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
+                                            <Doodler />
+                                        </div>
+
+                                        <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
+                                            <Pilot />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </ParallaxLayer>
                     </Parallax>
@@ -81,20 +131,3 @@ const AboutPage: NextPage = () => {
 };
 
 export default AboutPage;
-
-{
-    /*             
-            <div className="w-screen">
-                <div className=" space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
-                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh] ">
-                        <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
-                            <Doodler />
-                        </div>
-
-                        <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] lg:opacity-50 lg:hover:opacity-100 dark:lg:border-slate-800">
-                            <Pilot />
-                        </div>
-                    </div>
-                </div>
-            </div> */
-}
