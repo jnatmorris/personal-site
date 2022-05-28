@@ -16,6 +16,8 @@ const Layout: React.FC<Props> = ({ children }) => {
             return;
         }
         setWidth(window.innerWidth);
+
+        console.log("Welcome to my site :)");
     }, []);
 
     return (
