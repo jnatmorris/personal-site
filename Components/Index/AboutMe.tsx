@@ -42,7 +42,7 @@ const AboutMe: React.FC = () => (
                     </span>{" "}
                     web developer and computer science student at Jacobs
                     University in Bremen Germany. While originally from Chicago
-                    IL, now based in New York City and Bremen.
+                    IL, I&apos;m now based in New York City and Bremen.
                 </h2>
             </div>
         </div>
