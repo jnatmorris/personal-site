@@ -45,7 +45,7 @@ const ChatApp: React.FC = () => {
                     <li>Accepts emojis</li>
                     <li>Joining and leaving messages</li>
                     <li>See how many users and usernames of who is online</li>
-                    <li>Light && Darkmode</li>
+                    <li>Light && Dark mode</li>
                 </ul>
             </div>
         </div>
