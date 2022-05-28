@@ -31,25 +31,25 @@ const FlagGame: React.FC = () => (
                     >
                         The Flag Game
                     </a>{" "}
-                    a simplistic, fun way to learn. Able to play singleplayer or
-                    multiplayer, to be joined by friends, versions to hone ones
-                    knowledge of all countries flags.
+                    a simplistic yet fun way to test your knowledge. Able to
+                    play singleplayer and multiplayer to hones ones knowledge of
+                    countries flags.
                 </h4>
 
                 <ul className="text-2xl">
                     <li>Multiplayer</li>
                     <ul>
                         <li>
-                            Able to get and accept requests from other users to
-                            play in lobby
+                            Receive and send real time game requests to others
+                            users in the lobby
                         </li>
                         <li>
-                            Able to choose a unique name to generate a pixel art
+                            Choose a unique name to generate pixel art of your
+                            character
                         </li>
-                        <li>Pixel Art for users in lobby</li>
                     </ul>
 
-                    <li>Light && Darkmode</li>
+                    <li>Light && Dark mode</li>
                 </ul>
             </div>
         </div>
