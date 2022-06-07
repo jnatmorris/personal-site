@@ -17,7 +17,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         }
         setWidth(window.innerWidth);
 
-        console.log("Welcome to my site :)");
+        console.log("Have a great day!");
     }, []);
 
     return (
