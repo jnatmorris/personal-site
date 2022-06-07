@@ -103,6 +103,7 @@ const AboutMe: React.FC = () => {
                                     cursor={true}
                                     cursorStyle="_"
                                     loop={Infinity}
+                                    deleteSpeed={70}
                                 />
                             </h2>
                         </div>
