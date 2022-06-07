@@ -3,7 +3,7 @@ import Image from "next/image";
 import me from "./img/me.jpg";
 import { Typewriter } from "react-simple-typewriter";
 
-const AboutMe: React.FC = () => {
+const AboutMeShort: React.FC = () => {
     // which word is being typed
     const [word, setWord] = React.useState<number>(0);
 
@@ -114,4 +114,4 @@ const AboutMe: React.FC = () => {
     );
 };
 
-export default AboutMe;
+export default AboutMeShort;
