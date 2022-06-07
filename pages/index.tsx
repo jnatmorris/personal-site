@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Navigation from "../Components/Navigation";
-import AboutMe from "../Components/Index/AboutMe";
+import AboutMeShort from "../Components/Index/AboutMeShort";
 
 // Chatapp
 import ChatApp from "../Components/Index/myWork/ChatApp/ChatApp";
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                             className="bg-white dark:bg-black"
                         >
                             <div className="mx-[10vw] lg:mx-[5vw]">
-                                <AboutMe />
+                                <AboutMeShort />
                             </div>
                         </ParallaxLayer>
 
