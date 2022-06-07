@@ -32,12 +32,12 @@ const ChatApp: React.FC = () => {
                     </a>{" "}
                     was my first ReactJS project. Allows for multidirectional
                     communication between clients and server using an exspress
-                    and socketio backend. Feel free to try it out{" "}
+                    and socketio backend.{" "}
                     <a
                         className="font-normal underline decoration-blue-600 underline-offset-1"
                         href=" https://instant-chatapp-react-socketio.herokuapp.com/"
                     >
-                        here
+                        Feel free to try it out here
                     </a>
                     . As my first project, it has only been styled for mobile
                     devices. One day when I may come back to it.
