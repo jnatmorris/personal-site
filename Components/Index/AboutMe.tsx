@@ -89,12 +89,12 @@ const AboutMe: React.FC = () => {
                             >
                                 <Typewriter
                                     words={[
-                                        "Computer science student",
-                                        "Web Developer",
-                                        "Typescript fanatic",
-                                        "Student Pilot",
-                                        "Hobby Doodler",
-                                        "Located in NYC",
+                                        "Computer science student ",
+                                        "Web Developer ",
+                                        "Typescript fanatic ",
+                                        "Student Pilot ",
+                                        "Hobby Doodler ",
+                                        "Located in NYC ",
                                     ]}
                                     onType={(currentWord) =>
                                         updateWordHandler(currentWord)
