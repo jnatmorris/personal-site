@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
             whileInView="visible"
             viewport={{ once: false }}
             variants={opacityVariants}
-            className="mx-[5vw] mt-[2vh] grid"
+            className="mx-[5vw] grid pt-[2vh]"
         >
             <div className="space-x-5 justify-self-end">
                 <m.button whileTap={ScaleVariant}>
