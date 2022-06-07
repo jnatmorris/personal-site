@@ -35,18 +35,13 @@ const Home: NextPage = () => {
                         pages={width > 640 ? 5 : 6}
                         className="bg-white dark:bg-black lg:block"
                     >
-                        <ParallaxLayer
-                            offset={0}
-                            sticky={{
-                                start: 0,
-                                end: width > 640 ? 0.3 : 0.15,
-                            }}
-                        >
+                        <ParallaxLayer offset={0} speed={2}>
                             <Navigation />
                         </ParallaxLayer>
                         <ParallaxLayer
+                            factor={1.5}
                             offset={0.2}
-                            speed={0}
+                            speed={1}
                             className="bg-white dark:bg-black"
                         >
                             <div className="mx-[10vw] lg:mx-[5vw]">
@@ -71,6 +66,7 @@ const Home: NextPage = () => {
                         <ParallaxLayer
                             offset={width > 640 ? 1.5 : 2.1}
                             speed={width > 640 ? 1 : 0}
+                            className="bg-white dark:bg-black"
                         >
                             <div className="mx-[10vw] lg:grid lg:grid-cols-2">
                                 <div className="lg:col-span-1" />
@@ -97,7 +93,7 @@ const Home: NextPage = () => {
                             }
                             className="lg:grid lg:grid-cols-2"
                         >
-                            <div className="mx-[10vw] lg:col-span-1  lg:self-center">
+                            <div className="ml-[5vw] lg:col-span-1  lg:place-items-center lg:self-center">
                                 <FlagGame />
                             </div>
                         </ParallaxLayer>
