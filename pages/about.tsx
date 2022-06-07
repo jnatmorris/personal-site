@@ -1,24 +1,15 @@
 import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-
-import Doodler from "../Components/About/Doodles";
-import Pilot from "../Components/About/Pilot";
 import Navigation from "../Components/Navigation";
 import MyStack from "../Components/About/MyStack";
 import MyMentality from "../Components/About/MyMentality";
+import AboutMe from "../Components/About/AboutMe";
+import Image from "next/image";
+import flight from "../Components/About/img/flight.png";
 import { Typewriter } from "react-simple-typewriter";
-import { DeviceWidth } from "../Components/Layout";
 
 const AboutPage: NextPage = () => {
-    const ref = React.useRef<IParallax>(null!);
-
-    const [endTypingHeader, setEndTypingHeader] =
-        React.useState<boolean>(false);
-    const [endTypingCoding, setEndTypingCoding] =
-        React.useState<boolean>(false);
-
     return (
         <>
             <Head>
@@ -26,40 +17,47 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
             </Head>
 
-            <DeviceWidth.Consumer>
-                {(width) => (
-                    <Parallax pages={width > 640 ? 2 : 3} ref={ref}>
-                        <ParallaxLayer offset={0}>
-                            <Navigation />
-                        </ParallaxLayer>
+            <div className="h-screen  w-screen space-y-[12vh] bg-white dark:bg-black ">
+                <Navigation />
 
-                        <ParallaxLayer offset={0.4} speed={0}>
-                            <div className="mx-[5vw] space-y-5">
-                                <div className="lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
-                                    <MyMentality />
-                                    <MyStack />
-                                </div>
-                            </div>
-                        </ParallaxLayer>
+                <div className="mx-[5vw]">
+                    <h1
+                        className="text-5xl font-medium "
+                        style={{
+                            fontFamily: "Roboto Mono, monospace",
+                        }}
+                    >
+                        <Typewriter
+                            words={["About me"]}
+                            cursor={true}
+                            cursorStyle={"_"}
+                        />
+                    </h1>
+                    <div className="grid grid-cols-3">
+                        <AboutMe />
+                        <div className="relative w-[85%] place-self-center">
+                            <Image
+                                src={flight}
+                                alt="Pilot"
+                                className="m-0 rounded-2xl"
+                                placeholder="blur"
+                                width={3194}
+                                height={1528}
+                                quality={100}
+                                priority={true}
+                                layout="responsive"
+                            />
+                        </div>
+                    </div>
+                </div>
 
-                        {/* <ParallaxLayer offset={1.5} speed={1}>
-                            <div className="mx-[10vw]">
-                                <div className="space-y-[15vh] lg:gap-y-[1vh] lg:space-y-0">
-                                    <div className="space-y-[15vh] lg:grid lg:grid-cols-2 lg:space-y-[0vh] ">
-                                        <div className="lg:border-r-[1.5px] lg:border-gray-200 lg:pr-[1vw] dark:lg:border-slate-800">
-                                            <Doodler />
-                                        </div>
-
-                                        <div className="lg:border-l-[1.5px] lg:border-gray-200 lg:pl-[1.5vw] dark:lg:border-slate-800">
-                                            <Pilot />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ParallaxLayer> */}
-                    </Parallax>
-                )}
-            </DeviceWidth.Consumer>
+                <div className="mx-[5vw] space-y-5">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
+                        <MyMentality />
+                        <MyStack />
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
