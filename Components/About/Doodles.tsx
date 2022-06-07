@@ -1,6 +1,8 @@
 import * as React from "react";
 import { m, Variants, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+
+// images
 import bf109 from "./img/doodles/bf109.png";
 import train from "./img/doodles/train.png";
 import t33 from "./img/doodles/t33.png";
@@ -8,7 +10,9 @@ import shuttle from "./img/doodles/shuttle.png";
 import gus from "./img/doodles/gus.png";
 
 const Doodler: React.FC = () => {
+    // which image to show
     const [activeImage, setActiveImg] = React.useState<number>(1);
+    // keep track if image has dismounted to mount other
     const [finishedDismount, setFinishedDismount] =
         React.useState<boolean>(false);
 
@@ -248,11 +252,11 @@ const Doodler: React.FC = () => {
                     </div>
                 </div>
 
-                <p className="pb-2 m-0 text-xl leading-normal">
-                    This is just a little hobby I partake in during my free
-                    time. Feel free to click on the images or use the arrows to
-                    cycle through some of my art.
-                </p>
+                <h4 className="pb-2 m-0 text-2xl font-normal leading-normal">
+                    When I&apos;m feeling creative, I&apos;ll take out my IPad
+                    and let my brain do the rest. Feel free to click on the
+                    images or use the arrows to cycle through some of my art.
+                </h4>
             </div>
         </div>
     );
