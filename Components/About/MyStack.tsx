@@ -18,18 +18,18 @@ const MyStack: React.FC = () => (
                         d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                 </svg>
-                <h2 className="text-xl text-slate-700 lg:py-[2vh] lg:text-center lg:text-4xl">
+                <h2 className="text-xl font-medium text-slate-700 dark:text-slate-100/90 lg:py-[2vh] lg:text-center lg:text-4xl">
                     My stack
                 </h2>
             </div>
 
-            <h4 className="text-xl font-normal leading-relaxed lg:leading-loose">
+            <h4 className="text-xl font-normal leading-relaxed dark:text-gray-200 lg:leading-loose">
                 While I have my personal preferences, I&apos;m always looking to
                 learn and experiment with new technologies. Believer that each
                 project has it&apos;s own set of tools.
             </h4>
 
-            <ul className="mt-[2vh] list-outside text-lg lg:mt-[0vh] lg:text-xl">
+            <ul className="mt-[2vh] list-outside text-lg dark:text-gray-200 lg:mt-[0vh] lg:text-xl">
                 <li>
                     <h5>
                         ReactJS -{" "}
