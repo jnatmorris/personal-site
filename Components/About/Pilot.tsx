@@ -21,14 +21,14 @@ const Pilot = () => {
                 />
             </div>
             <div className="px-2 pt-3">
-                <h3 className="m-0">Student pilot</h3>
+                <h3 className="m-0 lg:text-3xl">Student pilot</h3>
 
-                <p className="pb-2 m-0 leading-normal">
+                <h4 className="pb-2 m-0 text-2xl font-normal leading-normal">
                     Since a young kid I have been entranced by aviation.
                     Beginning in 2017, I started my journey of obtaining a
                     private pilots license. Since then, I have flow in the USA,
                     New Zealand, and Germany.
-                </p>
+                </h4>
             </div>
         </div>
     );
