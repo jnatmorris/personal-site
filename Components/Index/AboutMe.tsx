@@ -1,52 +1,116 @@
 import * as React from "react";
 import Image from "next/image";
 import me from "./img/me.jpg";
-import { m } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
-const AboutMe: React.FC = () => (
-    <div>
-        <h1 className="text-3xl font-semibold lg:hidden">
-            Hey I&apos;m Justin,
-        </h1>
+const AboutMe: React.FC = () => {
+    // which word is being typed
+    const [word, setWord] = React.useState<number>(0);
 
-        <div className="gap-x-[2vw] lg:mx-[4vw] lg:grid lg:grid-cols-2">
-            <div className="my-[3vh] lg:mt-[1vh]">
-                <m.div
-                    className="relative w-full origin-center"
-                    initial={{ opacity: 0.2 }}
-                    animate={{ opacity: 1 }}
-                >
-                    <Image
-                        src={me}
-                        width={1439}
-                        height={831}
-                        placeholder="blur"
-                        priority={true}
-                        layout="responsive"
-                        className="rounded-2xl"
-                        quality={100}
-                        alt="Justin"
-                    />
-                </m.div>
-            </div>
-            <div className="py-[1vh] lg:place-self-center">
-                <h1 className="hidden font-semibold lg:block lg:text-3xl">
-                    Hey I&apos;m Justin,
-                </h1>
+    const [style, setStyle] = React.useState<string>("");
 
-                <h2 className="text-2xl font-normal leading-normal h-min lg:leading-relaxed">
-                    I&apos;m a front-end{" "}
-                    <span className="underline decoration-sky-400 underline-offset-1 hover:decoration-sky-600">
-                        {" "}
-                        ReactJS
-                    </span>{" "}
-                    web developer and computer science student at Jacobs
-                    University in Bremen Germany. While originally from Chicago
-                    IL, I&apos;m now based in New York City and Bremen.
-                </h2>
+    // update which word is being printed to screen
+    const updateWordHandler = (currentWord: number): void => {
+        setWord(currentWord);
+    };
+
+    // change color depending on text
+    React.useEffect(() => {
+        const remainder = word % 6;
+        switch (remainder) {
+            case 0:
+                setStyle("");
+                break;
+            case 1:
+                setStyle("text-[#61DBFB]");
+                break;
+            case 2:
+                setStyle("text-[#007acc]");
+                break;
+            case 3:
+                setStyle("");
+                break;
+            case 4:
+                setStyle("");
+                break;
+            case 5:
+                setStyle("text-[#fd3b2d]");
+                break;
+
+            default:
+                break;
+        }
+
+        return () => setStyle("");
+    }, [word]);
+
+    return (
+        <div>
+            <h1 className="text-3xl font-semibold lg:hidden">
+                Hey I&apos;m Justin,
+            </h1>
+
+            <div className="gap-x-[2vw] lg:mx-[4vw] lg:grid lg:grid-cols-2 lg:content-center ">
+                <div className="my-[3vh] lg:mt-[1vh]">
+                    <div className="relative w-full origin-center">
+                        <Image
+                            src={me}
+                            width={1439}
+                            height={831}
+                            placeholder="blur"
+                            priority={true}
+                            layout="responsive"
+                            className="rounded-2xl"
+                            quality={100}
+                            alt="Justin"
+                        />
+                    </div>
+                </div>
+                <div className="lg:flex lg:self-center">
+                    <div className="space-y-4 py-[1vh] ">
+                        <h1
+                            className="hidden font-semibold lg:block lg:text-5xl"
+                            style={{ fontFamily: "Roboto, sans-serif" }}
+                        >
+                            Hey, I&apos;m Justin
+                        </h1>
+
+                        <div className="flex space-x-3">
+                            {/* Ensure proper grammar */}
+                            <h2 className="font-light lg:text-3xl">
+                                {(word + 1) % 6 !== 0 ? "I'm a..." : "And..."}
+                            </h2>
+
+                            <h2
+                                className={[
+                                    style,
+                                    "self-end text-2xl font-semibold",
+                                ].join(" ")}
+                            >
+                                <Typewriter
+                                    words={[
+                                        "Computer science student",
+                                        "Web Developer",
+                                        "Typescript fanatic",
+                                        "Student Pilot",
+                                        "Hobby Doodler",
+                                        "Located in NYC",
+                                    ]}
+                                    onType={(currentWord) =>
+                                        updateWordHandler(currentWord)
+                                    }
+                                    delaySpeed={1800}
+                                    cursor={true}
+                                    cursorStyle="_"
+                                    loop={Infinity}
+                                />
+                            </h2>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default AboutMe;
