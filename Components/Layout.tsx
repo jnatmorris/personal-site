@@ -41,6 +41,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                         sizes="16x16"
                         href="/icons/favicon-16x16.png"
                     />
+                    <meta name="theme-color" content="#317EFB" />
                     <link rel="manifest" href="/site.webmanifest" />
                 </Head>
 
