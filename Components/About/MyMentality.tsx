@@ -1,9 +1,7 @@
 import * as React from "react";
-import Image from "next/image";
-import Lightbulb from "./img/lightbulb.jpg";
 
 const MyMentality: React.FC = () => (
-    <div className="lg:px-[0.75vw]">
+    <div className=" lg:px-[0.75vw]">
         <div className="flex items-center space-x-[1vw]">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -24,60 +22,55 @@ const MyMentality: React.FC = () => (
             </h3>
         </div>
 
-        <div className="grid:cols-2 lg:grid">
-            <div>
-                <h4 className="text-xl font-normal leading-relaxed dark:text-gray-200 lg:leading-loose">
-                    If carving a niche in the market or building the next
-                    Unicorn company, within the first{" "}
-                    <span className="text-orange-600 ">ten seconds</span>, a
-                    user will choose whether to click away.{" "}
-                    <span className="font-semibold text-blue-300">
-                        User retention
-                    </span>{" "}
-                    is indispensible to succeed. I design and compose web sites
-                    that feel modern while not bloating bundle sizes as every{" "}
-                    <span className="font-semibold text-yellow-400">
-                        second
-                    </span>{" "}
-                    that passes, could be a lost customer.
-                </h4>
+        <div>
+            <h4 className="text-xl font-normal leading-relaxed dark:text-gray-200 lg:leading-loose">
+                If carving a niche in the market or building the next Unicorn
+                company, within the first{" "}
+                <span className="text-orange-600 ">ten seconds</span>, a user
+                will choose whether to click away.{" "}
+                <span className="font-semibold text-blue-300">
+                    User retention
+                </span>{" "}
+                is indispensible to succeed. I design and compose web sites that
+                feel modern while not bloating bundle sizes as every{" "}
+                <span className="font-semibold text-yellow-400">second</span>{" "}
+                that passes, could be a lost customer.
+            </h4>
 
-                <ul className="mt-[2vh] list-outside text-lg dark:text-gray-200 lg:mt-[0vh] lg:text-xl">
-                    <li>
-                        <h5>
-                            Fast load time -{" "}
-                            <span className="font-normal opacity-[0.7]">
-                                small & efficient bundle size
-                            </span>
-                        </h5>
-                    </li>
-                    <li>
-                        <h5>
-                            SEO Optimization{" "}
-                            <span className="font-normal opacity-[0.7]">
-                                - optimize indexing to reach greater audiences
-                            </span>
-                        </h5>
-                    </li>
-                    <li>
-                        <h5>
-                            Clean and simple (UI & UX){" "}
-                            <span className="font-normal opacity-[0.7]">
-                                - easy on the eyes as to not overwhelm the user
-                            </span>
-                        </h5>
-                    </li>
-                    <li>
-                        <h5>
-                            Accessability -{" "}
-                            <span className="font-normal opacity-[0.7]">
-                                a site should function & look good on all
-                                screens
-                            </span>
-                        </h5>
-                    </li>
-                </ul>
-            </div>
+            <ul className="mt-[2vh] list-outside text-lg dark:text-gray-200 lg:mt-[0vh] lg:text-xl">
+                <li>
+                    <h5>
+                        Fast load time -{" "}
+                        <span className="font-normal opacity-[0.7]">
+                            small & efficient bundle size
+                        </span>
+                    </h5>
+                </li>
+                <li>
+                    <h5>
+                        SEO Optimization{" "}
+                        <span className="font-normal opacity-[0.7]">
+                            - optimize indexing to reach greater audiences
+                        </span>
+                    </h5>
+                </li>
+                <li>
+                    <h5>
+                        Clean and simple (UI & UX){" "}
+                        <span className="font-normal opacity-[0.7]">
+                            - easy on the eyes as to not overwhelm the user
+                        </span>
+                    </h5>
+                </li>
+                <li>
+                    <h5>
+                        Accessability -{" "}
+                        <span className="font-normal opacity-[0.7]">
+                            a site should function & look good on all screens
+                        </span>
+                    </h5>
+                </li>
+            </ul>
         </div>
     </div>
 );
