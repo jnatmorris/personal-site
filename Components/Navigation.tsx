@@ -26,43 +26,45 @@ const Navigation: React.FC = () => {
     };
 
     return (
-        <m.header
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            variants={opacityVariants}
-            className="mx-[5vw] grid pt-[2vh]"
-        >
-            <div className="space-x-5 justify-self-end">
-                <m.button whileTap={ScaleVariant}>
-                    <Link href={"/"}>
-                        <a
-                            className={
-                                route.pathname === "/"
-                                    ? "text-xl decoration-sky-500 underline-offset-2"
-                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80"
-                            }
-                        >
-                            Home
-                        </a>
-                    </Link>
-                </m.button>
+        <div className="w-screen">
+            <m.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                variants={opacityVariants}
+                className="mx-[5vw] grid pt-[2vh]"
+            >
+                <div className="space-x-5 justify-self-end">
+                    <m.button whileTap={ScaleVariant}>
+                        <Link href={"/"}>
+                            <a
+                                className={
+                                    route.pathname === "/"
+                                        ? "text-xl decoration-sky-500 underline-offset-2"
+                                        : "text-xl no-underline opacity-[0.6] hover:opacity-80"
+                                }
+                            >
+                                Home
+                            </a>
+                        </Link>
+                    </m.button>
 
-                <m.button whileTap={ScaleVariant}>
-                    <Link href={"/about"}>
-                        <a
-                            className={
-                                route.pathname === "/about"
-                                    ? "text-xl decoration-sky-500 underline-offset-2"
-                                    : "text-xl no-underline opacity-[0.6] hover:opacity-80"
-                            }
-                        >
-                            About
-                        </a>
-                    </Link>
-                </m.button>
-            </div>
-        </m.header>
+                    <m.button whileTap={ScaleVariant}>
+                        <Link href={"/about"}>
+                            <a
+                                className={
+                                    route.pathname === "/about"
+                                        ? "text-xl decoration-sky-500 underline-offset-2"
+                                        : "text-xl no-underline opacity-[0.6] hover:opacity-80"
+                                }
+                            >
+                                About
+                            </a>
+                        </Link>
+                    </m.button>
+                </div>
+            </m.div>
+        </div>
     );
 };
 

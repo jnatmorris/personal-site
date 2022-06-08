@@ -1,14 +1,12 @@
 import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Navigation from "../Components/Navigation";
 import MyStack from "../Components/About/MyStack";
 import MyMentality from "../Components/About/MyMentality";
 import AboutMe from "../Components/About/AboutMe";
 import Image from "next/image";
 import flight from "../Components/About/img/flight.png";
 import { Typewriter } from "react-simple-typewriter";
-import Connect from "../Components/Connect";
 
 const AboutPage: NextPage = () => {
     return (
@@ -22,8 +20,6 @@ const AboutPage: NextPage = () => {
                 <div className="mx-[5vw] space-y-[10vh]">
                     {/*  */}
                     <div className="space-y-[5vh]">
-                        <Navigation />
-
                         <h1
                             className="pb-[3vh] text-5xl font-medium "
                             style={{
@@ -67,7 +63,6 @@ const AboutPage: NextPage = () => {
                         <MyStack />
                     </div>
                 </div>
-                <Connect />
             </div>
         </>
     );

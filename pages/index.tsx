@@ -17,7 +17,6 @@ import {
     FlagGameGame,
     FlagGameLobby,
 } from "../Components/Index/myWork/FlagGame/FlagGameImg";
-import Connect from "../Components/Connect";
 
 const Home: NextPage = () => {
     const [scrollHeight, setScrollHeight] = React.useState<number>(0);
@@ -47,9 +46,7 @@ const Home: NextPage = () => {
                         className={
                             scrollHeight < 200 ? "sticky top-0" : "relative"
                         }
-                    >
-                        <Navigation />
-                    </div>
+                    ></div>
 
                     <div
                         className={
@@ -106,8 +103,6 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </div>
-
-                <Connect />
             </div>
         </>
     );

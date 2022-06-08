@@ -6,7 +6,7 @@ const MyStack: React.FC = () => (
             <div className="flex items-center space-x-[1vw]">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
+                    className="w-10 h-10"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -23,13 +23,13 @@ const MyStack: React.FC = () => (
                 </h3>
             </div>
 
-            <h4 className="text-xl font-normal leading-relaxed dark:text-gray-200 lg:leading-loose">
+            <h4 className="text-lg font-normal leading-relaxed dark:text-gray-200 lg:leading-loose">
                 While I have my personal preferences, I&apos;m always looking to
                 learn and experiment with new technologies. Believer that each
                 project has it&apos;s own set of tools.
             </h4>
 
-            <ul className="mt-[2vh] list-outside text-lg dark:text-gray-200 lg:mt-[0vh] lg:text-xl">
+            <ul className="text-md mt-[2vh] list-outside dark:text-gray-200 lg:mt-[0vh]">
                 <li>
                     <h5>
                         ReactJS -{" "}
