@@ -8,6 +8,7 @@ import AboutMe from "../Components/About/AboutMe";
 import Image from "next/image";
 import flight from "../Components/About/img/flight.png";
 import { Typewriter } from "react-simple-typewriter";
+import Connect from "../Components/Connect";
 
 const AboutPage: NextPage = () => {
     return (
@@ -17,7 +18,7 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
             </Head>
 
-            <div className="h-screen w-screen space-y-[10vh] bg-white dark:bg-black">
+            <div className="w-screen space-y-[10vh] bg-white dark:bg-black">
                 <div className="mx-[5vw] space-y-[10vh]">
                     {/*  */}
                     <div className="space-y-[5vh]">
@@ -66,6 +67,7 @@ const AboutPage: NextPage = () => {
                         <MyStack />
                     </div>
                 </div>
+                <Connect />
             </div>
         </>
     );
