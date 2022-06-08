@@ -2,7 +2,7 @@ import * as React from "react";
 
 const AboutMe: React.FC = () => {
     return (
-        <div className="col-span-3">
+        <div className="lg:col-span-3">
             <div className="ml-[0.5vw] mr-[2vw] space-y-8 ">
                 <h2 className="text-2xl font-normal leading-relaxed dark:text-gray-200">
                     I&apos;m originally from Chicago IL, and currently studying

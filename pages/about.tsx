@@ -23,7 +23,7 @@ const AboutPage: NextPage = () => {
 
                     <div className="mx-[5vw]">
                         <h1
-                            className="text-5xl font-medium "
+                            className="pb-[3vh] text-5xl font-medium "
                             style={{
                                 fontFamily: "Roboto Mono, monospace",
                             }}
@@ -34,9 +34,29 @@ const AboutPage: NextPage = () => {
                                 cursorStyle={"_"}
                             />
                         </h1>
-                        <div className="grid grid-cols-5">
+
+                        {/* mobile */}
+                        <div className="block space-y-[2vh] lg:hidden">
+                            <div className="relative w-full">
+                                <Image
+                                    src={flight}
+                                    alt="Pilot"
+                                    className="m-0 rounded-2xl"
+                                    placeholder="blur"
+                                    width={3194}
+                                    height={1528}
+                                    quality={100}
+                                    priority={true}
+                                    layout="responsive"
+                                />
+                            </div>
                             <AboutMe />
-                            <div className="relative w-full col-span-2 place-self-center">
+                        </div>
+
+                        {/* desktop */}
+                        <div className="hidden lg:grid lg:grid-cols-5">
+                            <AboutMe />
+                            <div className="relative w-full lg:col-span-2 lg:place-self-center">
                                 <Image
                                     src={flight}
                                     alt="Pilot"
