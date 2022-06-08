@@ -33,7 +33,7 @@ const AboutPage: NextPage = () => {
                             cursorStyle={"_"}
                         />
                     </h1>
-                    <div className="grid grid-cols-3">
+                    <div className="grid grid-cols-2">
                         <AboutMe />
                         <div className="relative w-[85%] place-self-center">
                             <Image
@@ -51,7 +51,7 @@ const AboutPage: NextPage = () => {
                     </div>
                 </div>
 
-                <div className="mx-[5vw] space-y-5">
+                <div className="mx-[2vh] space-y-5 pb-[5vh]">
                     <div className="lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
                         <MyMentality />
                         <MyStack />
