@@ -6,20 +6,10 @@ interface Props {
     children: React.ReactNode;
 }
 
-export const DeviceWidth = React.createContext<number>(0);
-
 const Layout: React.FC<Props> = ({ children }) => {
-    // set width for media queries
-    const [width, setWidth] = React.useState<number>(0);
     React.useEffect(() => {
-        if (typeof window === "undefined") {
-            return;
-        }
-        setWidth(window.innerWidth);
-
         console.log("Have a great day!");
     }, []);
-
     return (
         <LazyMotion strict features={domAnimation}>
             <MotionConfig reducedMotion="user">
@@ -46,9 +36,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                 </Head>
 
                 <div className="prose prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 prose-img:m-0 dark:prose-invert">
-                    <DeviceWidth.Provider value={width}>
-                        <main>{children}</main>
-                    </DeviceWidth.Provider>
+                    <main>{children}</main>
                 </div>
             </MotionConfig>
         </LazyMotion>
