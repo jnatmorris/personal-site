@@ -17,36 +17,38 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About" />
             </Head>
 
-            <div className="h-screen  w-screen space-y-[12vh] bg-white dark:bg-black ">
-                <Navigation />
+            <div className="h-screen w-screen space-y-[5vh] bg-white dark:bg-black ">
+                <div className="space-y-[12vh]">
+                    <Navigation />
 
-                <div className="mx-[5vw]">
-                    <h1
-                        className="text-5xl font-medium "
-                        style={{
-                            fontFamily: "Roboto Mono, monospace",
-                        }}
-                    >
-                        <Typewriter
-                            words={["About me"]}
-                            cursor={true}
-                            cursorStyle={"_"}
-                        />
-                    </h1>
-                    <div className="grid grid-cols-5">
-                        <AboutMe />
-                        <div className="relative w-full col-span-2 place-self-center">
-                            <Image
-                                src={flight}
-                                alt="Pilot"
-                                className="m-0 rounded-2xl"
-                                placeholder="blur"
-                                width={3194}
-                                height={1528}
-                                quality={100}
-                                priority={true}
-                                layout="responsive"
+                    <div className="mx-[5vw]">
+                        <h1
+                            className="text-5xl font-medium "
+                            style={{
+                                fontFamily: "Roboto Mono, monospace",
+                            }}
+                        >
+                            <Typewriter
+                                words={["About me"]}
+                                cursor={true}
+                                cursorStyle={"_"}
                             />
+                        </h1>
+                        <div className="grid grid-cols-5">
+                            <AboutMe />
+                            <div className="relative w-full col-span-2 place-self-center">
+                                <Image
+                                    src={flight}
+                                    alt="Pilot"
+                                    className="m-0 rounded-2xl"
+                                    placeholder="blur"
+                                    width={3194}
+                                    height={1528}
+                                    quality={100}
+                                    priority={true}
+                                    layout="responsive"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
