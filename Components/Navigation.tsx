@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Link from "next/link";
 import { m, Variant } from "framer-motion";
 import { useRouter } from "next/router";

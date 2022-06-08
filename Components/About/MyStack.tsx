@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 const MyStack: React.FC = () => (
     <div className="space-y-[3vh] lg:px-[0.75vw]">
@@ -6,7 +6,7 @@ const MyStack: React.FC = () => (
             <div className="flex items-center space-x-[1vw]">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-10 h-10"
+                    className="h-10 w-10"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

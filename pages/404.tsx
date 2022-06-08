@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Router from "next/router";
 import { Variants, m } from "framer-motion";
 
@@ -33,7 +33,7 @@ const FourOFour: React.FC = () => {
                         animate={"show"}
                     >
                         <h1 className="font-medium ">Redirecting</h1>
-                        <div className="flex ml-1 space-x-1">
+                        <div className="ml-1 flex space-x-1">
                             <m.h1 className="font-medium" variants={dot}>
                                 .
                             </m.h1>

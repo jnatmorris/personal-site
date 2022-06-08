@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 const ChatApp: React.FC = () => {
     return (
@@ -7,7 +7,7 @@ const ChatApp: React.FC = () => {
                 <div className="flex items-center space-x-[1vw]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-10 h-10"
+                        className="h-10 w-10"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >

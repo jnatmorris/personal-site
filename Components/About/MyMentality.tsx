@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 const MyMentality: React.FC = () => (
     <div className=" lg:px-[0.75vw]">

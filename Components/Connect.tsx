@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 const Connect: React.FC = () => (
     <div className="mx-[2vw] pb-1 lg:mx-[5vw] lg:flex lg:justify-end lg:pb-[2vh]">
