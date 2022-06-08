@@ -58,12 +58,12 @@ const Home: NextPage = () => {
                     </div>
                 </div>
 
-                <div className="">
+                <div>
                     <div className="lg:mx-[5vw]">
                         <div
                             className={
                                 (scrollHeight < 2000 ? "sticky" : "relative") +
-                                " top-[10vh] lg:grid lg:grid-cols-2"
+                                " top-[7vh] lg:grid lg:grid-cols-2"
                             }
                         >
                             <ChatApp />
