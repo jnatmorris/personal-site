@@ -35,7 +35,7 @@ const AboutPage: NextPage = () => {
                     </h1>
                     <div className="grid grid-cols-5">
                         <AboutMe />
-                        <div className="relative w-[85%] place-self-center">
+                        <div className="relative w-full col-span-2 place-self-center">
                             <Image
                                 src={flight}
                                 alt="Pilot"
