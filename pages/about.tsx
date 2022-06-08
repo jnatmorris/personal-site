@@ -18,7 +18,7 @@ const AboutPage: NextPage = () => {
             </Head>
 
             <div className="h-screen w-screen space-y-[10vh] bg-white dark:bg-black">
-                <div className="mx-[5vw] space-y-[10vh] lg:space-y-[5vh]">
+                <div className="mx-[5vw] space-y-[10vh]">
                     {/*  */}
                     <div className="space-y-[5vh]">
                         <Navigation />
