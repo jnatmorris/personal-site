@@ -33,7 +33,7 @@ const AboutPage: NextPage = () => {
                             cursorStyle={"_"}
                         />
                     </h1>
-                    <div className="grid grid-cols-2">
+                    <div className="grid grid-cols-5">
                         <AboutMe />
                         <div className="relative w-[85%] place-self-center">
                             <Image
