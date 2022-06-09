@@ -13,53 +13,56 @@ const AboutPage: NextPage = () => {
         <>
             <Head>
                 <title>Justin Morris</title>
-                <meta name="description" content="About" />
+                <meta name="description" content="About Page" />
             </Head>
 
-            <div className="w-screen space-y-[10vh] bg-white dark:bg-black">
-                <div className="mx-[5vw] space-y-[10vh]">
-                    {/*  */}
-                    <div className="space-y-[5vh]">
-                        <h1
-                            className="pb-[3vh] text-5xl font-medium "
-                            style={{
-                                fontFamily: "Roboto Mono, monospace",
-                            }}
-                        >
-                            <Typewriter
-                                words={["About me"]}
-                                cursor={true}
-                                cursorStyle={"_"}
-                            />
-                        </h1>
-
-                        <div className="lg:grid lg:grid-cols-5">
-                            <div className="hidden lg:col-span-3 lg:block">
-                                <AboutMe />
-                            </div>
-
-                            <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
-                                <Image
-                                    src={flight}
-                                    alt="Pilot"
-                                    className="m-0 rounded-2xl"
-                                    placeholder="blur"
-                                    width={3194}
-                                    height={1528}
-                                    quality={100}
-                                    priority={true}
-                                    layout="responsive"
+            <div className="w-screen">
+                <div className="mx[10vh] h-screen lg:mx-[5vw]">
+                    <div className="relative">
+                        <div className="absolute top-[20vh]">
+                            <h1
+                                className="pb-[3vh] text-5xl font-medium "
+                                style={{
+                                    fontFamily: "Roboto Mono, monospace",
+                                }}
+                            >
+                                <Typewriter
+                                    words={["About me"]}
+                                    cursor={true}
+                                    cursorStyle={"_"}
                                 />
-                            </div>
+                            </h1>
+                            <div className="lg:grid lg:grid-cols-5">
+                                <div className="hidden lg:col-span-3 lg:block">
+                                    <AboutMe />
+                                </div>
 
-                            <div className="block lg:hidden">
-                                <AboutMe />
+                                <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
+                                    <Image
+                                        src={flight}
+                                        alt="Pilot"
+                                        className="m-0 rounded-2xl"
+                                        placeholder="blur"
+                                        width={3194}
+                                        height={1528}
+                                        quality={100}
+                                        priority={true}
+                                        layout="responsive"
+                                    />
+                                </div>
+
+                                <div className="block lg:hidden">
+                                    <AboutMe />
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div className="mx[10vh] lg:mx-[5vw]">
                     <div className="space-y-[5vh] lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
                         <MyMentality />
+
                         <MyStack />
                     </div>
                 </div>
