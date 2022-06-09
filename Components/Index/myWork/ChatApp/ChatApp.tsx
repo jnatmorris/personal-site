@@ -7,7 +7,7 @@ const ChatApp: React.FC = () => {
                 <div className="flex items-center space-x-[1vw]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-10 w-10"
+                        className="w-10 h-10"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >
@@ -23,7 +23,7 @@ const ChatApp: React.FC = () => {
                     </h2>
                 </div>
 
-                <h4 className="text-2xl font-normal leading-relaxed lg:leading-loose">
+                <h3 className="text-2xl font-normal leading-relaxed lg:leading-loose">
                     <a
                         href="https://github.com/JNat07/React-Socket.IO-ChatApp"
                         className="font-normal underline decoration-blue-500 underline-offset-2 "
@@ -41,7 +41,7 @@ const ChatApp: React.FC = () => {
                     </a>
                     . As my first project, it has only been styled for mobile
                     devices. One day when I may come back to it.
-                </h4>
+                </h3>
             </div>
             <ul className="text-2xl">
                 <li>Text communication</li>

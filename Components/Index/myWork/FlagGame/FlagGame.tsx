@@ -29,7 +29,7 @@ const FlagGame: React.FC = () => (
                 </h2>
             </div>
 
-            <h4 className="text-2xl font-normal leading-relaxed lg:leading-loose">
+            <h3 className="text-2xl font-normal leading-relaxed lg:leading-loose">
                 <a
                     href="https://github.com/JNat07/flag-game-frontend"
                     className="font-normal underline decoration-blue-500 underline-offset-1"
@@ -39,7 +39,7 @@ const FlagGame: React.FC = () => (
                 a simplistic yet fun way to test your knowledge. Able to play
                 singleplayer and multiplayer to hones ones knowledge of
                 countries flags.
-            </h4>
+            </h3>
 
             <ul className="text-2xl">
                 <li>
