@@ -17,29 +17,7 @@ import {
     FlagGameLobby,
 } from "../Components/Index/myWork/FlagGame/FlagGameImg";
 
-import ScrollTop from "../Components/scrollTop";
-import { AnimatePresence, m } from "framer-motion";
-
 const Home: NextPage = () => {
-    const [noFirst, setNotFirst] = React.useState<boolean>();
-
-    React.useEffect(() => {
-        window.onscroll = function () {
-            const scrollTop =
-                window.pageYOffset ||
-                (
-                    document.documentElement ||
-                    document.body.parentNode ||
-                    document.body
-                ).scrollTop;
-            if (scrollTop > window.innerHeight) {
-                setNotFirst(true);
-            } else {
-                setNotFirst(false);
-            }
-        };
-    }, []);
-
     return (
         <>
             <Head>
@@ -53,18 +31,6 @@ const Home: NextPage = () => {
                         <AboutMeShort />
                     </div>
                 </div>
-
-                <AnimatePresence>
-                    {noFirst && (
-                        <m.div
-                            animate={{ opacity: 1 }}
-                            initial={{ opacity: 0 }}
-                            exit={{ opacity: 0 }}
-                        >
-                            <ScrollTop />
-                        </m.div>
-                    )}
-                </AnimatePresence>
 
                 <div className="lg:mx-[5vw]">
                     <div className={"sticky top-[25vh] lg:grid lg:grid-cols-2"}>
