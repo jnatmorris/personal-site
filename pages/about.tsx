@@ -59,7 +59,7 @@ const AboutPage: NextPage = () => {
                     </div>
                 </div>
 
-                <div className="mx[10vh] pb-[10vh] lg:mx-[5vw]">
+                <div className="mx[10vh] pb-[30vh] lg:mx-[5vw]">
                     <div className="space-y-[5vh] lg:grid lg:grid-cols-2 lg:gap-x-10 lg:space-y-0">
                         <MyMentality />
 
