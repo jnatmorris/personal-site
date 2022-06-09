@@ -1,7 +1,24 @@
 {
     "name": "personal-site",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "private": false,
+    "description": "The personal site of Justin Morris.",
+    "author": {
+        "name": "Justin Morris",
+        "email": "justin@jnmorris.dev",
+        "url": "https://www.jnmorris.dev/"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jnatmorris/personal-site.git"
+    },
+    "keywords": [
+        "react",
+        "NextJS",
+        "tailwindcss",
+        "personal site"
+    ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
