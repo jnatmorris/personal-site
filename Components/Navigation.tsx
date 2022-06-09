@@ -10,30 +10,9 @@ const Navigation: React.FC = () => {
         scale: 0.9,
     };
 
-    const opacityVariants = {
-        hidden: {
-            opacity: 0,
-            transition: {
-                duration: 0.25,
-            },
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.25,
-            },
-        },
-    };
-
     return (
-        <div className="w-screen">
-            <m.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                variants={opacityVariants}
-                className="mx-[5vw] grid pt-[2vh]"
-            >
+        <header className="w-screen">
+            <div className="mx-[5vw] grid pt-[2vh]">
                 <div className="space-x-5 justify-self-end">
                     <m.button whileTap={ScaleVariant}>
                         <Link href={"/"}>
@@ -63,8 +42,8 @@ const Navigation: React.FC = () => {
                         </Link>
                     </m.button>
                 </div>
-            </m.div>
-        </div>
+            </div>
+        </header>
     );
 };
 
