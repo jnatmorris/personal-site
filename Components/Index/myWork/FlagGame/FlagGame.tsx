@@ -7,7 +7,7 @@ const FlagGame: React.FC = () => (
             <div className="flex items-center space-x-[1vw] ">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
+                    className="w-10 h-10"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -42,17 +42,19 @@ const FlagGame: React.FC = () => (
             </h4>
 
             <ul className="text-2xl">
-                <li>Multiplayer</li>
-                <ul>
-                    <li>
-                        Receive and send real time game requests to others users
-                        in the lobby
-                    </li>
-                    <li>
-                        Choose a unique name to generate pixel art of your
-                        character
-                    </li>
-                </ul>
+                <li>
+                    Multiplayer
+                    <ul>
+                        <li>
+                            Receive and send real time game requests to others
+                            users in the lobby
+                        </li>
+                        <li>
+                            Choose a unique name to generate pixel art of your
+                            character
+                        </li>
+                    </ul>
+                </li>
 
                 <li>Light && Dark mode</li>
             </ul>
