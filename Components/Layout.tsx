@@ -3,15 +3,40 @@ import Head from "next/head";
 import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 import Connect from "./Connect";
 import Navigation from "./Navigation";
+import ScrollTop from "./scrollTop";
 
 interface Props {
     children: React.ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
+    const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
+
     React.useEffect(() => {
         console.log("Have a great day!");
+        window.onscroll = function () {
+            // get scroll position of user
+            const viewportScrollDist =
+                window.pageYOffset ||
+                (
+                    document.documentElement ||
+                    document.body.parentNode ||
+                    document.body
+                ).scrollTop;
+
+            // if below first page or at bottom of page
+            if (
+                viewportScrollDist > window.innerHeight ||
+                window.innerHeight + window.scrollY >=
+                    document.body.offsetHeight
+            ) {
+                setShowUpArrow(true);
+            } else {
+                setShowUpArrow(false);
+            }
+        };
     }, []);
+
     return (
         <LazyMotion strict features={domAnimation}>
             <MotionConfig reducedMotion="user">
@@ -42,6 +67,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                         <Navigation />
                         {children}
                         <Connect />
+                        <ScrollTop showUpArrow={showUpArrow} />
                     </main>
                 </div>
             </MotionConfig>
