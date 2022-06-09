@@ -2,7 +2,6 @@ import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import Navigation from "../Components/Navigation";
 import AboutMeShort from "../Components/Index/AboutMeShort";
 
 // Chatapp
@@ -18,19 +17,27 @@ import {
     FlagGameLobby,
 } from "../Components/Index/myWork/FlagGame/FlagGameImg";
 
+import ScrollTop from "../Components/scrollTop";
+import { AnimatePresence, m } from "framer-motion";
+
 const Home: NextPage = () => {
-    const [scrollHeight, setScrollHeight] = React.useState<number>(0);
+    const [noFirst, setNotFirst] = React.useState<boolean>();
+
     React.useEffect(() => {
-        window.addEventListener("scroll", () => {
-            const scrolledVal =
+        window.onscroll = function () {
+            const scrollTop =
                 window.pageYOffset ||
                 (
                     document.documentElement ||
                     document.body.parentNode ||
                     document.body
                 ).scrollTop;
-            setScrollHeight(scrolledVal);
-        });
+            if (scrollTop > window.innerHeight) {
+                setNotFirst(true);
+            } else {
+                setNotFirst(false);
+            }
+        };
     }, []);
 
     return (
@@ -41,66 +48,53 @@ const Home: NextPage = () => {
             </Head>
 
             <div className="w-screen space-y-[20vh]">
-                <div className="h-screen">
-                    <div
-                        className={
-                            scrollHeight < 200 ? "sticky top-0" : "relative"
-                        }
-                    ></div>
-
-                    <div
-                        className={
-                            (scrollHeight < 800 ? "sticky" : "relative") +
-                            " top-[30vh] mx-[10vw]  lg:mx-[5vw]"
-                        }
-                    >
+                <div className="mx-[10vw] h-screen lg:mx-[5vw]">
+                    <div className={"sticky top-[25vh]"}>
                         <AboutMeShort />
                     </div>
                 </div>
 
-                <div>
-                    <div className="lg:mx-[5vw]">
-                        <div
-                            className={
-                                (scrollHeight < 2000 ? "sticky" : "relative") +
-                                " top-[7vh] lg:grid lg:grid-cols-2"
-                            }
+                <AnimatePresence>
+                    {noFirst && (
+                        <m.div
+                            animate={{ opacity: 1 }}
+                            initial={{ opacity: 0 }}
+                            exit={{ opacity: 0 }}
                         >
-                            <ChatApp />
-                        </div>
-                        {/* ChatApp Login Images */}
+                            <ScrollTop />
+                        </m.div>
+                    )}
+                </AnimatePresence>
 
-                        <div className="mx-[10vw] lg:grid lg:grid-cols-2">
-                            <div className="lg:col-span-1" />
-                            <ChatAppImgDark />
-                        </div>
-                        <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
-                            <div className="lg:col-span-1" />
-                            <ChatAppImgLight />
-                        </div>
+                <div className="lg:mx-[5vw]">
+                    <div className={"sticky top-[25vh] lg:grid lg:grid-cols-2"}>
+                        <ChatApp />
+                    </div>
+                    {/* ChatApp Login Images */}
+
+                    <div className="mx-[10vw] lg:grid lg:grid-cols-2">
+                        <div className="lg:col-span-1" />
+                        <ChatAppImgDark />
+                    </div>
+                    <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
+                        <div className="lg:col-span-1" />
+                        <ChatAppImgLight />
                     </div>
                 </div>
 
-                <div className="">
-                    <div className="lg:mx-[5vw]">
-                        <div
-                            className={
-                                (scrollHeight < 3000 ? "sticky" : "relative") +
-                                " top-[10vh] lg:grid lg:grid-cols-2"
-                            }
-                        >
-                            <FlagGame />
-                        </div>
-                        {/* ChatApp Login Images */}
+                <div className="lg:mx-[5vw]">
+                    <div className={"sticky top-[25vh] lg:grid lg:grid-cols-2"}>
+                        <FlagGame />
+                    </div>
+                    {/* ChatApp Login Images */}
 
-                        <div className="mx-[10vw] lg:grid lg:grid-cols-2">
-                            <div className="lg:col-span-1" />
-                            <FlagGameLobby />
-                        </div>
-                        <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
-                            <div className="lg:col-span-1" />
-                            <FlagGameGame />
-                        </div>
+                    <div className="mx-[10vw] lg:grid lg:grid-cols-2">
+                        <div className="lg:col-span-1" />
+                        <FlagGameLobby />
+                    </div>
+                    <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
+                        <div className="lg:col-span-1" />
+                        <FlagGameGame />
                     </div>
                 </div>
             </div>
