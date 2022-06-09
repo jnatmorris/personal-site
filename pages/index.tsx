@@ -49,7 +49,7 @@ const Home: NextPage = () => {
 
             <div className="w-screen space-y-[20vh]">
                 <div className="mx-[10vw] h-screen lg:mx-[5vw]">
-                    <div className={"sticky top-[25vh]"}>
+                    <div className="sticky top-[25vh]">
                         <AboutMeShort />
                     </div>
                 </div>
