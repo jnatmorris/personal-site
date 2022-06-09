@@ -23,11 +23,11 @@ const ScrollTop: React.FC<Props> = ({ showUpArrow }) => {
                 >
                     <div
                         onClick={scrollTopHandler}
-                        className="fixed bottom-5 right-3 hidden w-min cursor-pointer rounded-full p-2 outline-2 ring-2 ring-slate-300 lg:block"
+                        className="fixed hidden p-2 rounded-full cursor-pointer bottom-5 right-3 w-min outline-2 ring-2 ring-slate-300 lg:block"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-7 w-7 fill-transparent stroke-slate-500"
+                            className="w-6 h-6 fill-transparent stroke-slate-500"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                         >
