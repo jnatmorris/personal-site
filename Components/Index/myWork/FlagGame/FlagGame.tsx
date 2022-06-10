@@ -7,7 +7,7 @@ const FlagGame: React.FC = () => (
             <div className="flex items-center space-x-[1vw] ">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-10 h-10"
+                    className="h-9 w-9"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                 >
