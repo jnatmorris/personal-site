@@ -2,7 +2,7 @@ import React from "react";
 
 const MyMentality: React.FC = () => (
     <div className=" lg:px-[0.75vw]">
-        <div className="flex items-center space-x-[1vw]">
+        <div className="flex space-x-[1vw] pb-[1vh]">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="self-center w-10 h-10"
