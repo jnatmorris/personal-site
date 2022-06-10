@@ -27,7 +27,7 @@ const ScrollTop: React.FC<Props> = ({ showUpArrow }) => {
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6 fill-transparent stroke-slate-500"
+                            className="w-6 h-6 fill-transparent stroke-slate-500 hover:fill-slate-700"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                         >
