@@ -67,7 +67,7 @@ const AboutMeShort: React.FC = () => {
                     </div>
                 </div>
                 <div className="lg:flex lg:self-center">
-                    <div className="space-y-4 py-[1vh] ">
+                    <div className="space-y-0 py-[1vh] lg:space-y-4 ">
                         <h1
                             className="hidden font-semibold lg:block lg:text-5xl"
                             style={{ fontFamily: "Roboto, sans-serif" }}
@@ -77,14 +77,14 @@ const AboutMeShort: React.FC = () => {
 
                         <div className="flex space-x-3">
                             {/* Ensure proper grammar */}
-                            <h2 className="font-light lg:text-3xl">
+                            <h2 className="text-2xl font-light lg:text-3xl">
                                 {(word + 1) % 6 !== 0 ? "I'm a..." : "And..."}
                             </h2>
 
                             <h2
                                 className={[
                                     style,
-                                    "self-end text-2xl font-semibold",
+                                    "self-end text-xl font-semibold lg:text-2xl",
                                 ].join(" ")}
                             >
                                 <Typewriter
