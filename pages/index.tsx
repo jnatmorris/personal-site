@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                 </div>
 
                 <div>
-                    <div className="space-y-10">
+                    <div className="space-y-10 lg:space-y-0">
                         <div className="relative lg:sticky lg:top-[10vh] lg:grid lg:grid-cols-2">
                             <ChatApp />
                         </div>
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 
                     <hr className="my-[10vh] lg:hidden" />
 
-                    <div className="space-y-10">
+                    <div className="space-y-10 lg:space-y-0">
                         <div className="relative lg:sticky lg:top-[15vh] lg:grid lg:grid-cols-2">
                             <FlagGame />
                         </div>
