@@ -6,7 +6,7 @@ const Connect: React.FC = () => (
             <div className="mx-[0.5vw] flex justify-around space-x-[5vw] border-t-2 border-slate-300 pt-1.5 prose-h3:m-0 dark:border-slate-600 lg:space-x-[3vw] ">
                 <h4>
                     <a
-                        className="text-xl no-underline lg:text-2xl"
+                        className="text-xl no-underline"
                         href="https://github.com/jnatmorris"
                     >
                         GitHub
@@ -14,7 +14,7 @@ const Connect: React.FC = () => (
                 </h4>
                 <h4>
                     <a
-                        className="text-xl no-underline lg:text-2xl"
+                        className="text-xl no-underline"
                         href="https://www.linkedin.com/in/justinnmorris/"
                     >
                         LinkedIn
@@ -22,7 +22,7 @@ const Connect: React.FC = () => (
                 </h4>
                 <h4>
                     <a
-                        className="text-xl no-underline lg:text-2xl"
+                        className="text-xl no-underline"
                         href="mailto:justin@jnmorris.dev"
                     >
                         Email
@@ -30,7 +30,7 @@ const Connect: React.FC = () => (
                 </h4>
                 <h4>
                     <a
-                        className="text-xl no-underline lg:text-2xl"
+                        className="text-xl no-underline"
                         href="./CV/CV.pdf"
                         download={"JustinMorrisResume"}
                     >
