@@ -2,8 +2,8 @@ import React from "react";
 
 const Connect: React.FC = () => (
     <footer className="w-screen">
-        <div className="mx-[2vw]  pb-1 lg:mx-[5vw] lg:flex lg:justify-end lg:pb-[2vh]">
-            <div className="flex justify-around space-x-[5vw]  border-t border-slate-300 px-[0.5vw] pt-1.5 prose-h3:m-0 dark:border-slate-600 lg:space-x-[3vw] lg:border-t-2 ">
+        <div className="mx-[2vw] pb-[2vh] lg:mx-[5vw] lg:flex lg:justify-end">
+            <div className="flex justify-around space-x-[5vw] border-t border-slate-300 px-[0.5vw] pt-1.5 prose-h3:m-0 dark:border-slate-600 lg:space-x-[3vw] lg:border-t-2 ">
                 <h4>
                     <a
                         className="text-xl no-underline"
