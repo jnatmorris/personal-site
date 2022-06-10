@@ -20,8 +20,8 @@ const AboutPage: NextPage = () => {
                 <div className="mx[10vh] h-screen lg:mx-[5vw]">
                     <div className="relative">
                         <div className="absolute top-[20vh]">
-                            <div className="lg:grid lg:grid-cols-2">
-                                <div className="col-span-1">
+                            <div className="lg:grid lg:grid-cols-7">
+                                <div className="col-span-5">
                                     <h1
                                         className="pb-[3vh] text-3xl font-bold "
                                         style={{
@@ -38,7 +38,7 @@ const AboutPage: NextPage = () => {
                                     <AboutMe />
                                 </div>
 
-                                <div className="col-span-1">
+                                <div className="col-span-2">
                                     <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
                                         <Image
                                             src={flight}
