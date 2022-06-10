@@ -84,7 +84,7 @@ const AboutMeShort: React.FC = () => {
                             <h2
                                 className={[
                                     style,
-                                    "text-md self-end font-normal lg:text-xl",
+                                    "self-end text-base font-normal lg:text-xl",
                                 ].join(" ")}
                             >
                                 <Typewriter
