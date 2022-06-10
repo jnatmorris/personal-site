@@ -77,14 +77,14 @@ const AboutMeShort: React.FC = () => {
 
                         <div className="flex space-x-3">
                             {/* Ensure proper grammar */}
-                            <h2 className="font-light lg:text-3xl">
+                            <h2 className="font-semibold lg:text-2xl">
                                 {(word + 1) % 6 !== 0 ? "I'm a..." : "And..."}
                             </h2>
 
                             <h2
                                 className={[
                                     style,
-                                    "self-end text-2xl font-semibold",
+                                    "self-end text-xl font-normal",
                                 ].join(" ")}
                             >
                                 <Typewriter
