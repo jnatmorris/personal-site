@@ -17,8 +17,8 @@ const AboutPage: NextPage = () => {
             </Head>
 
             <div className="w-screen">
-                <div className="mx-[5vw] space-y-[10vh]">
-                    <div className="mt-[10vh] lg:mt-[20vh]">
+                <div className="mx-[5vw] space-y-[20vh] lg:space-y-[0vh]">
+                    <div className="mt-[10vh] lg:mt-[20vh] lg:h-screen">
                         <div className="lg:grid lg:grid-cols-7">
                             <div className="lg:col-span-4">
                                 <h1
