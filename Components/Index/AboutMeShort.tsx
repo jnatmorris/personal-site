@@ -69,7 +69,7 @@ const AboutMeShort: React.FC = () => {
                 <div className="lg:flex lg:self-center">
                     <div className="space-y-4 py-[1vh] ">
                         <h1
-                            className="hidden font-semibold lg:block lg:text-5xl"
+                            className="hidden font-semibold lg:block lg:text-3xl"
                             style={{ fontFamily: "Roboto, sans-serif" }}
                         >
                             Hey, I&apos;m Justin
