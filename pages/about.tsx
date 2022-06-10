@@ -20,39 +20,38 @@ const AboutPage: NextPage = () => {
                 <div className="mx[10vh] h-screen lg:mx-[5vw]">
                     <div className="relative">
                         <div className="absolute top-[20vh]">
-                            <h1
-                                className="pb-[3vh] text-3xl font-bold "
-                                style={{
-                                    fontFamily: "Roboto Mono, monospace",
-                                }}
-                            >
-                                <Typewriter
-                                    words={["About me"]}
-                                    cursor={true}
-                                    cursorStyle={"_"}
-                                />
-                            </h1>
                             <div className="lg:grid lg:grid-cols-5">
-                                <div className="hidden lg:col-span-3 lg:block">
+                                <div className="col-span-3">
+                                    <h1
+                                        className="pb-[3vh] text-3xl font-bold "
+                                        style={{
+                                            fontFamily:
+                                                "Roboto Mono, monospace",
+                                        }}
+                                    >
+                                        <Typewriter
+                                            words={["About me"]}
+                                            cursor={true}
+                                            cursorStyle={"_"}
+                                        />
+                                    </h1>
                                     <AboutMe />
                                 </div>
 
-                                <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
-                                    <Image
-                                        src={flight}
-                                        alt="Pilot"
-                                        className="m-0 rounded-2xl"
-                                        placeholder="blur"
-                                        width={3194}
-                                        height={1528}
-                                        quality={100}
-                                        priority={true}
-                                        layout="responsive"
-                                    />
-                                </div>
-
-                                <div className="block lg:hidden">
-                                    <AboutMe />
+                                <div className="col-span-2">
+                                    <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
+                                        <Image
+                                            src={flight}
+                                            alt="Pilot"
+                                            className="m-0 rounded-2xl"
+                                            placeholder="blur"
+                                            width={3194}
+                                            height={1528}
+                                            quality={100}
+                                            priority={true}
+                                            layout="responsive"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
