@@ -23,7 +23,7 @@ const MyMentality: React.FC = () => (
         </div>
 
         <div>
-            <h4 className="font-normal leading-relaxed text-md dark:text-gray-200 lg:leading-loose">
+            <h4 className="text-lg font-normal leading-relaxed dark:text-gray-200 lg:leading-loose">
                 If carving a niche in the market or building the next Unicorn
                 company, within the first{" "}
                 <span className="text-orange-600 ">ten seconds</span>, a user
@@ -37,7 +37,7 @@ const MyMentality: React.FC = () => (
                 that passes, could be a lost customer.
             </h4>
 
-            <ul className="mt-[2vh] list-outside text-sm dark:text-gray-200 lg:mt-[0vh]">
+            <ul className="text-md mt-[2vh] list-outside dark:text-gray-200 lg:mt-[0vh]">
                 <li>
                     <h5>
                         Fast load time -{" "}
