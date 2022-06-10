@@ -25,42 +25,50 @@ const Home: NextPage = () => {
                 <meta name="description" content="Justin's Personal Site" />
             </Head>
 
-            <div className="w-screen space-y-[20vh]">
-                <div className="mx-[10vw] h-screen lg:mx-[5vw]">
+            <div className="mx-[5vw] space-y-[20vh]">
+                <div className="h-screen">
                     <div className="sticky top-[20vh]">
                         <AboutMeShort />
                     </div>
                 </div>
 
-                <div className="lg:mx-[5vw]">
-                    <div className={"sticky top-[15vh] lg:grid lg:grid-cols-2"}>
-                        <ChatApp />
-                    </div>
-                    {/* ChatApp Login Images */}
+                <div>
+                    <div className="space-y-10">
+                        <div className="relative lg:sticky lg:top-[10vh] lg:grid lg:grid-cols-2">
+                            <ChatApp />
+                        </div>
 
-                    <div className="mx-[10vw] lg:grid lg:grid-cols-2">
-                        <div className="lg:col-span-1" />
-                        <ChatAppImgDark />
+                        <div>
+                            {/* ChatApp Login Images */}
+                            <div className="mx-[10vw] lg:grid lg:grid-cols-2">
+                                <div className="lg:col-span-1" />
+                                <ChatAppImgDark />
+                            </div>
+                            <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
+                                <div className="lg:col-span-1" />
+                                <ChatAppImgLight />
+                            </div>
+                        </div>
                     </div>
-                    <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
-                        <div className="lg:col-span-1" />
-                        <ChatAppImgLight />
-                    </div>
-                </div>
 
-                <div className="lg:mx-[5vw]">
-                    <div className={"sticky top-[15vh] lg:grid lg:grid-cols-2"}>
-                        <FlagGame />
-                    </div>
-                    {/* ChatApp Login Images */}
+                    <hr className="my-[5vh] lg:hidden" />
 
-                    <div className="mx-[10vw] lg:grid lg:grid-cols-2">
-                        <div className="lg:col-span-1" />
-                        <FlagGameLobby />
-                    </div>
-                    <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
-                        <div className="lg:col-span-1" />
-                        <FlagGameGame />
+                    <div className="space-y-10">
+                        <div className="relative lg:sticky lg:top-[15vh] lg:grid lg:grid-cols-2">
+                            <FlagGame />
+                        </div>
+
+                        <div>
+                            {/* ChatApp Login Images */}
+                            <div className="mx-[10vw] lg:grid lg:grid-cols-2">
+                                <div className="lg:col-span-1" />
+                                <FlagGameLobby />
+                            </div>
+                            <div className="mx-[10vw] -mt-[40vh] lg:grid lg:grid-cols-2">
+                                <div className="lg:col-span-1" />
+                                <FlagGameGame />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
