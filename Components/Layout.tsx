@@ -66,10 +66,10 @@ const Layout: React.FC<Props> = ({ children }) => {
                     <main>
                         <Navigation />
                         {children}
-                        <Connect />
                         <div className="mt-[4vh]">
-                            <ScrollTop showUpArrow={showUpArrow} />
+                            <Connect />
                         </div>
+                        <ScrollTop showUpArrow={showUpArrow} />
                     </main>
                 </div>
             </MotionConfig>
