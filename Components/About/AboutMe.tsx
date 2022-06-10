@@ -3,7 +3,7 @@ import React from "react";
 const AboutMe: React.FC = () => {
     return (
         <>
-            <div className="ml-[0.5vw] mr-[2vw] space-y-8 ">
+            <div className="ml-[0.5vw] mr-[2vw] space-y-8 pr-[2vw] ">
                 <h2 className="text-xl font-normal leading-relaxed dark:text-gray-200">
                     I&apos;m originally from Chicago IL, and currently studying
                     abroad a BSc. in Computer Science as well as perusing a BA.

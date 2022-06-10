@@ -39,7 +39,7 @@ const AboutPage: NextPage = () => {
                             </div>
 
                             <div className="col-span-3">
-                                <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
+                                <div className="relative mb-5 block w-full lg:col-span-2 lg:my-0">
                                     <Image
                                         src={flight}
                                         alt="Pilot"
