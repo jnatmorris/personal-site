@@ -17,49 +17,44 @@ const AboutPage: NextPage = () => {
             </Head>
 
             <div className="w-screen">
-                <div className="mx-[5vw]">
-                    <div className="h-screen">
-                        <div className="relative">
-                            <div className="mt-[10vh]">
-                                <div className="lg:grid lg:grid-cols-7">
-                                    <div className="lg:col-span-4">
-                                        <h1
-                                            className="pb-[3vh] text-3xl font-bold "
-                                            style={{
-                                                fontFamily:
-                                                    "Roboto Mono, monospace",
-                                            }}
-                                        >
-                                            <Typewriter
-                                                words={["About me"]}
-                                                cursor={true}
-                                                cursorStyle={"_"}
-                                            />
-                                        </h1>
-                                        <div className="hidden lg:block">
-                                            <AboutMe />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-span-3">
-                                        <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
-                                            <Image
-                                                src={flight}
-                                                alt="Pilot"
-                                                className="m-0 rounded-2xl"
-                                                placeholder="blur"
-                                                width={3194}
-                                                height={1528}
-                                                quality={100}
-                                                priority={true}
-                                                layout="responsive"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="lg:hidden">
-                                        <AboutMe />
-                                    </div>
+                <div className="mx-[5vw] space-y-[10vh]">
+                    <div className="mt-[10vh] lg:mt-[20vh]">
+                        <div className="lg:grid lg:grid-cols-7">
+                            <div className="lg:col-span-4">
+                                <h1
+                                    className="pb-[3vh] text-3xl font-bold "
+                                    style={{
+                                        fontFamily: "Roboto Mono, monospace",
+                                    }}
+                                >
+                                    <Typewriter
+                                        words={["About me"]}
+                                        cursor={true}
+                                        cursorStyle={"_"}
+                                    />
+                                </h1>
+                                <div className="hidden lg:block">
+                                    <AboutMe />
                                 </div>
+                            </div>
+
+                            <div className="col-span-3">
+                                <div className="relative block w-full mb-5 lg:col-span-2 lg:my-0">
+                                    <Image
+                                        src={flight}
+                                        alt="Pilot"
+                                        className="m-0 rounded-2xl"
+                                        placeholder="blur"
+                                        width={3194}
+                                        height={1528}
+                                        quality={100}
+                                        priority={true}
+                                        layout="responsive"
+                                    />
+                                </div>
+                            </div>
+                            <div className="lg:hidden">
+                                <AboutMe />
                             </div>
                         </div>
                     </div>
