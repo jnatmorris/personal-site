@@ -27,13 +27,13 @@ const Home: NextPage = () => {
 
             <div className="w-screen space-y-[20vh]">
                 <div className="mx-[10vw] h-screen lg:mx-[5vw]">
-                    <div className="sticky top-[25vh]">
+                    <div className="sticky top-[20vh]">
                         <AboutMeShort />
                     </div>
                 </div>
 
                 <div className="lg:mx-[5vw]">
-                    <div className={"sticky top-[25vh] lg:grid lg:grid-cols-2"}>
+                    <div className={"sticky top-[20vh] lg:grid lg:grid-cols-2"}>
                         <ChatApp />
                     </div>
                     {/* ChatApp Login Images */}
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className="lg:mx-[5vw]">
-                    <div className={"sticky top-[25vh] lg:grid lg:grid-cols-2"}>
+                    <div className={"sticky top-[20vh] lg:grid lg:grid-cols-2"}>
                         <FlagGame />
                     </div>
                     {/* ChatApp Login Images */}
