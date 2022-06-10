@@ -21,7 +21,7 @@ const AboutPage: NextPage = () => {
                     <div className="relative">
                         <div className="absolute top-[20vh]">
                             <h1
-                                className="pb-[3vh] text-5xl font-medium "
+                                className="pb-[3vh] text-3xl font-bold "
                                 style={{
                                     fontFamily: "Roboto Mono, monospace",
                                 }}
