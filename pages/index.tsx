@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
 
-                    <hr className="my-[5vh] lg:hidden" />
+                    <hr className="my-[10vh] lg:hidden" />
 
                     <div className="space-y-10">
                         <div className="relative lg:sticky lg:top-[15vh] lg:grid lg:grid-cols-2">
