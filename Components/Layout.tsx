@@ -12,11 +12,27 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
     const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
 
-    const darkModeDetector = (): void => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            document.documentElement.classList.add("dark");
+    const darkModeDetector = (firstRun: boolean): void => {
+        if (firstRun) {
+            if (
+                localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                localStorage.theme = "dark";
+                document.documentElement.classList.add("dark");
+            } else {
+                localStorage.theme = "light";
+                document.documentElement.classList.remove("dark");
+            }
         } else {
-            document.documentElement.classList.remove("dark");
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                localStorage.theme = "dark";
+                document.documentElement.classList.add("dark");
+            } else {
+                localStorage.theme = "light";
+                document.documentElement.classList.remove("dark");
+            }
         }
     };
 
@@ -45,14 +61,14 @@ const Layout: React.FC<Props> = ({ children }) => {
         };
 
         // run when first loaded
-        darkModeDetector();
+        darkModeDetector(true);
 
         // add event listener
         window
             .matchMedia("(prefers-color-scheme: dark)")
             .addEventListener("change", (event) => {
                 console.log("run inside of event listener");
-                darkModeDetector();
+                darkModeDetector(false);
             });
     }, []);
 
