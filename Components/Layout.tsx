@@ -13,6 +13,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
 
     const setDark = (): void => {
+        console.log("Dark!");
         localStorage.theme = "dark";
         document.documentElement.classList.add("dark");
     };
