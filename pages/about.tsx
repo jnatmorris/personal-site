@@ -16,7 +16,7 @@ const AboutPage: NextPage = () => {
                 <meta name="description" content="About Page" />
             </Head>
 
-            <div className="bg-white dark:bg-black">
+            <div>
                 <div className="mx-[5vw] space-y-[20vh] lg:space-y-[0vh]">
                     <div className="mt-[10vh] lg:mt-[25vh] lg:h-screen">
                         <div className="lg:grid lg:grid-cols-7">
