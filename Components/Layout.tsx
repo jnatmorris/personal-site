@@ -12,30 +12,30 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
     const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
 
+    const setDark = (): void => {
+        localStorage.theme = "dark";
+        document.documentElement.classList.add("dark");
+    };
+
+    const setLight = (): void => {
+        localStorage.theme = "light";
+        document.documentElement.classList.remove("dark");
+    };
+
     const darkModeDetector = (firstRun: boolean): void => {
         console.log("First rune: ", firstRun);
         console.log("before:", localStorage.theme);
 
-        if (firstRun) {
-            if (
-                localStorage.theme === "dark" ||
-                (!("theme" in localStorage) &&
-                    window.matchMedia("(prefers-color-scheme: dark)").matches)
-            ) {
-                localStorage.theme = "dark";
-                document.documentElement.classList.add("dark");
-            } else {
-                localStorage.theme = "light";
-                document.documentElement.classList.remove("dark");
-            }
+        if (!firstRun) {
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+                ? setDark()
+                : setLight();
         } else {
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                localStorage.theme = "dark";
-                document.documentElement.classList.add("dark");
-            } else {
-                localStorage.theme = "light";
-                document.documentElement.classList.remove("dark");
-            }
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? setDark()
+                : setLight();
         }
 
         console.log("After:", localStorage.theme);
@@ -43,6 +43,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 
     React.useEffect(() => {
         console.log("Welcome to my site! :)");
+
         window.onscroll = function () {
             // get scroll position of user
             const viewportScrollDist =
