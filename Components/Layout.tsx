@@ -13,6 +13,9 @@ const Layout: React.FC<Props> = ({ children }) => {
     const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
 
     const darkModeDetector = (firstRun: boolean): void => {
+        console.log("First rune: ", firstRun);
+        console.log("before:", localStorage.theme);
+
         if (firstRun) {
             if (
                 localStorage.theme === "dark" ||
@@ -34,6 +37,8 @@ const Layout: React.FC<Props> = ({ children }) => {
                 document.documentElement.classList.remove("dark");
             }
         }
+
+        console.log("After:", localStorage.theme);
     };
 
     React.useEffect(() => {
@@ -67,7 +72,6 @@ const Layout: React.FC<Props> = ({ children }) => {
         window
             .matchMedia("(prefers-color-scheme: dark)")
             .addEventListener("change", (event) => {
-                console.log("run inside of event listener");
                 darkModeDetector(false);
             });
     }, []);
