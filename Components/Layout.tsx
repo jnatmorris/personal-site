@@ -22,13 +22,29 @@ const Layout: React.FC<Props> = ({ children }) => {
         document.documentElement.classList.remove("dark");
     };
 
-    const darkModeDetector = (onLoad: boolean): void => {
-        console.log("First rune: ", onLoad);
+    const darkModeDetector = (firstRun: boolean): void => {
         console.log("before:", localStorage.theme);
 
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? setDark()
-            : setLight();
+        if (firstRun) {
+            console.log("First run!");
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? setDark()
+                : setLight();
+        } else {
+            console.log("Not first run!");
+            console.log("Theme: ", localStorage.theme);
+
+            if (!("theme" in localStorage)) {
+                console.log("No theme!");
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? setDark()
+                    : setLight();
+            } else if (localStorage.theme === "dark") {
+                setDark();
+            } else {
+                setLight();
+            }
+        }
 
         console.log("After:", localStorage.theme);
     };
