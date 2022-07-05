@@ -35,24 +35,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                 setShowUpArrow(false);
             }
         };
-
-        window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", (event) => {
-                if (
-                    localStorage.theme === "dark" ||
-                    (!("theme" in localStorage) &&
-                        window.matchMedia("(prefers-color-scheme: dark)")
-                            .matches)
-                ) {
-                    localStorage.theme = "dark";
-                    document.documentElement.classList.add("dark");
-                } else {
-                    localStorage.theme = "light";
-                    document.documentElement.classList.remove("dark");
-                }
-                console.log(localStorage.theme);
-            });
     }, []);
 
     return (
@@ -81,7 +63,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                 </Head>
 
                 <div className="prose prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 prose-img:m-0 dark:prose-invert">
-                    <main className="w-screen bg-white dark:bg-black">
+                    <main className="w-screen">
                         <Navigation />
                         {children}
                         <div className="mt-[7vh]">
