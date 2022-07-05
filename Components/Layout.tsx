@@ -16,10 +16,8 @@ const Layout: React.FC<Props> = ({ children }) => {
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
             document.documentElement.classList.add("dark");
         } else {
-            localStorage.theme = "light";
             document.documentElement.classList.remove("dark");
         }
-        console.log(localStorage.theme);
     };
 
     React.useEffect(() => {
