@@ -46,11 +46,14 @@ const Layout: React.FC<Props> = ({ children }) => {
             }
         };
 
+        // run when first loaded
         darkModeDetector();
 
+        // add event listener
         window
             .matchMedia("(prefers-color-scheme: dark)")
             .addEventListener("change", (event) => {
+                console.log("run inside of event listener");
                 darkModeDetector();
             });
     }, []);
