@@ -13,7 +13,6 @@ const Layout: React.FC<Props> = ({ children }) => {
     const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
 
     const setDark = (): void => {
-        console.log("Dark!");
         localStorage.theme = "dark";
         document.documentElement.classList.add("dark");
     };
@@ -23,21 +22,13 @@ const Layout: React.FC<Props> = ({ children }) => {
         document.documentElement.classList.remove("dark");
     };
 
-    const darkModeDetector = (firstRun: boolean): void => {
-        console.log("First rune: ", firstRun);
+    const darkModeDetector = (onLoad: boolean): void => {
+        console.log("First rune: ", onLoad);
         console.log("before:", localStorage.theme);
 
-        if (!firstRun) {
-            localStorage.theme === "dark" ||
-            (!("theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-                ? setDark()
-                : setLight();
-        } else {
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? setDark()
-                : setLight();
-        }
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? setDark()
+            : setLight();
 
         console.log("After:", localStorage.theme);
     };
