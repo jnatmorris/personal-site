@@ -39,8 +39,6 @@ const Layout: React.FC<Props> = ({ children }) => {
         window
             .matchMedia("(prefers-color-scheme: dark)")
             .addEventListener("change", (event) => {
-                console.log(localStorage.theme);
-
                 if (
                     localStorage.theme === "dark" ||
                     (!("theme" in localStorage) &&
@@ -53,6 +51,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                     localStorage.theme = "light";
                     document.documentElement.classList.remove("dark");
                 }
+                console.log(localStorage.theme);
             });
     }, []);
 
