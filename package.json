@@ -28,10 +28,10 @@
         "analyze": "cross-env ANALYZE=true next build"
     },
     "dependencies": {
-        "framer-motion": "^6.3.11",
-        "next": "^12.1.6",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
+        "framer-motion": "^6.4.1",
+        "next": "^12.2.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "react-simple-typewriter": "^3.0.1"
     },
     "devDependencies": {
