@@ -23,8 +23,6 @@ const Layout: React.FC<Props> = ({ children }) => {
     };
 
     const darkModeDetector = (firstRun: boolean): void => {
-        console.log("before:", localStorage.theme);
-
         if (firstRun) {
             console.log("First run!");
             window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -34,19 +32,12 @@ const Layout: React.FC<Props> = ({ children }) => {
             console.log("Not first run!");
             console.log("Theme: ", localStorage.theme);
 
-            if (!("theme" in localStorage)) {
-                console.log("No theme!");
-                window.matchMedia("(prefers-color-scheme: dark)").matches
-                    ? setDark()
-                    : setLight();
-            } else if (localStorage.theme === "dark") {
+            if (localStorage.theme === "dark") {
                 setDark();
             } else {
                 setLight();
             }
         }
-
-        console.log("After:", localStorage.theme);
     };
 
     React.useEffect(() => {
