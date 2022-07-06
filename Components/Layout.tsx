@@ -25,6 +25,8 @@ const Layout: React.FC<Props> = ({ children }) => {
     const darkModeDetector = (firstRun: boolean): void => {
         if (firstRun) {
             console.log("First run!");
+            localStorage.removeItem("theme");
+
             window.matchMedia("(prefers-color-scheme: dark)").matches
                 ? setDark()
                 : setLight();
