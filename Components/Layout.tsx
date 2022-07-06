@@ -12,14 +12,6 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
     const [showUpArrow, setShowUpArrow] = React.useState<boolean>(false);
 
-    const setDark = (): void => {
-        document.documentElement.classList.add("dark");
-    };
-
-    const setLight = (): void => {
-        document.documentElement.classList.remove("dark");
-    };
-
     React.useEffect(() => {
         console.log("Welcome to my site! :)");
 
@@ -44,22 +36,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                 setShowUpArrow(false);
             }
         };
-
-        // add event listener
-        window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", (e) => {
-                console.log("Run event listener");
-                e.matches ? setDark() : setLight();
-            });
-
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            console.log("First run Dark!");
-            setDark();
-        } else {
-            console.log("First run Light!");
-            setLight();
-        }
     }, []);
 
     return (
