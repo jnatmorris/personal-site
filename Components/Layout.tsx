@@ -72,7 +72,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                 </Head>
 
                 <div className="prose prose-h1:m-0 prose-h2:m-0 prose-h3:m-0 prose-h4:m-0 prose-p:m-0 prose-img:m-0 dark:prose-invert">
-                    <main className="w-screen bg-white dark:bg-black">
+                    <main className="w-screen">
                         <Navigation />
                         {children}
                         <div className="mt-[7vh]">
