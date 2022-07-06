@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                 <meta name="description" content="Justin's Personal Site" />
             </Head>
 
-            <div className="mx-[5vw] space-y-[20vh] bg-white dark:bg-black">
+            <div className="mx-[5vw] space-y-[20vh]">
                 <div className="h-screen">
                     <div className="sticky top-[20vh]">
                         <AboutMeShort />
