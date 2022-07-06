@@ -5,6 +5,8 @@ import Connect from "./Connect";
 import Navigation from "./Navigation";
 import ScrollTop from "./scrollTop";
 
+import "../styles/globals.css";
+
 interface Props {
     children: React.ReactNode;
 }
