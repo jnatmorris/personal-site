@@ -22,26 +22,6 @@ const Layout: React.FC<Props> = ({ children }) => {
         document.documentElement.classList.remove("dark");
     };
 
-    const darkModeDetector = (firstRun: boolean): void => {
-        if (firstRun) {
-            console.log("First run!");
-            localStorage.removeItem("theme");
-
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? setDark()
-                : setLight();
-        } else {
-            console.log("Not first run!");
-            console.log("Theme: ", localStorage.theme);
-
-            if (localStorage.theme === "dark") {
-                setDark();
-            } else {
-                setLight();
-            }
-        }
-    };
-
     React.useEffect(() => {
         console.log("Welcome to my site! :)");
 
@@ -67,15 +47,24 @@ const Layout: React.FC<Props> = ({ children }) => {
             }
         };
 
-        // run when first loaded
-        darkModeDetector(true);
-
         // add event listener
         window
             .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", (event) => {
-                darkModeDetector(false);
+            .addEventListener("change", (e) => {
+                console.log("Run event listener");
+                e.matches ? setDark() : setLight();
             });
+
+        if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+            console.log("First run Dark!");
+            setDark();
+        } else {
+            console.log("First run Light!");
+            setLight();
+        }
     }, []);
 
     return (
