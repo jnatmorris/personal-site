@@ -39,7 +39,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     // }, []);
 
     return (
-        <LazyMotion strict features={domAnimation}>
+        <>
             <Head>
                 <link
                     rel="apple-touch-icon"
@@ -72,7 +72,7 @@ const Layout: React.FC<Props> = ({ children }) => {
                     {/* <ScrollTop showUpArrow={showUpArrow} /> */}
                 </main>
             </div>
-        </LazyMotion>
+        </>
     );
 };
 
