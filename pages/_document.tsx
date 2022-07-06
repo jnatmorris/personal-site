@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
     return (
@@ -10,6 +11,7 @@ export default function Document() {
                     href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap"
                     rel="stylesheet"
                 />
+                <Script src="/theme.js" strategy="beforeInteractive" />
             </Head>
 
             <body className="bg-white dark:bg-black">
