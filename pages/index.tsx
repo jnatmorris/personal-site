@@ -19,7 +19,7 @@ import {
 
 const Home: NextPage = () => {
     return (
-        <>
+        <div className="bg-white dark:bg-black">
             <Head>
                 <title>Justin Morris</title>
                 <meta name="description" content="Justin's Personal Site" />
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
