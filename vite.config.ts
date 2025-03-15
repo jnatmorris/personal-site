@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   server: {
@@ -6,7 +7,8 @@ export default defineConfig({
   },
   build: {
     outDir: "../dist",
-    emptyOutDir: true
+    emptyOutDir: true,
   },
   root: "src",
+  plugins: [tailwindcss()],
 });
