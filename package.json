@@ -1,7 +1,6 @@
 {
-  "name": "vite-tailwind-starter",
-  "description": "NoJS Vite + Tailwind CSS Starter",
-  "version": "0.0.0",
+  "name": "personal-site",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
